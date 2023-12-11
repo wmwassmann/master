@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/style.css"
+import "../css/globalStyle.css"
 
 export default function aboutMe() {
     return (
-        <div>
+        <div className="header">
             ABOUT ME
         </div>
     )
