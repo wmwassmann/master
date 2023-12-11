@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar Global */
+
+.navbar-container {
+    background: #515151;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.navbar-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-container a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.navbar-container li.active {
+    background-color: rgb(117, 117, 117);
+}
+
+.navbar-container li:hover {
+    background-color: rgb(119, 119, 119);
+}
+
+
+/* Navbar Items */
+
+.site-title {
+    font-size: 2rem;
+}

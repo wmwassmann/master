@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
+import Game from "./pages/Game";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           <Route index element={<HomePage/> } />      
           <Route path="about" element={<AboutMe/>} />
           <Route path="portfolio" element={<Portfolio/>} />
+          <Route path="game" element={<Game/>} />
         </Routes>
     </BrowserRouter>
   )
