@@ -1,0 +1,24 @@
+/* home containement  */
+
+.home-container {
+    display: flex;
+    color: #131313;
+    justify-content: space-between;
+  }
+
+.home-info {
+    padding: 5rem;
+    margin: 5rem;
+    font-size: 6rem;
+}
+
+.home-title {
+    text-align: center;
+}
+
+.home-article {
+    font-size: 2rem; 
+    text-align: center;
+    padding: .5rem;
+}
+

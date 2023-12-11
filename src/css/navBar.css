@@ -5,13 +5,13 @@
 /* Navbar Global */
 
 .navbar-container {
-    background: #515151;
+    background: #131313;
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 0 3rem;
 }
 
 .navbar-container ul {
@@ -19,7 +19,7 @@
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .navbar-container a {
@@ -28,14 +28,14 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .25rem;
+    padding: 2rem;
 }
 
 .navbar-container li.active {
     background-color: rgb(117, 117, 117);
 }
 
-.navbar-container li:hover {
+.navbar-container li:hover, .site-title:hover {
     background-color: rgb(119, 119, 119);
 }
 
@@ -43,5 +43,5 @@
 /* Navbar Items */
 
 .site-title {
-    font-size: 2rem;
+    font-size: 3rem;
 }

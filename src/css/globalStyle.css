@@ -1,13 +1,8 @@
 body {
-    background: #005844;
-    color: hsl(200, 100%, 90%);
+    background: #f7f7f7;
+    color: hsl(0, 0%, 100%);
     margin: 0 auto;
   }
 
-.header {
-    color: hsl(158, 89%, 45%);
-}
 
-.title-name {
-    color: hsl(158, 89%, 45%);
-}
+
