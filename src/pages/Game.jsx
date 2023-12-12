@@ -1,10 +1,15 @@
-import React from "react";
-import "../css/globalStyle.css"
+import { React } from "react";
+import RandomWordGenerator from "../components/Game";
+import "../css/globalStyle.css";
+
 
 export default function aboutMe() {
     return (
-        <div className="header">
-            GAME
+        <div>
+            <div className="header">                
+                GAME           
+            </div>
+            <RandomWordGenerator/>
         </div>
     )
 }

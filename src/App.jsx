@@ -1,5 +1,5 @@
 import "./css/globalStyle.css";
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
