@@ -5,3 +5,11 @@
 .random-word-output {
     color: #333
 }
+
+/* input boxes */
+
+#userInput {
+    display: flex;
+    justify-content: space-between;
+    max-width: 2rem;
+}
