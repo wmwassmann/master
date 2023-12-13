@@ -4,14 +4,15 @@ import UserInput from "../components/Game/UserInput";
 import "../css/globalStyle.css";
 
 
-export default function aboutMe() {
+export default function aboutMe() {    
+
+
     return (
         <div>
             <div className="header">                
                 GAME           
             </div>
             <RandomWordGenerator/>
-            <UserInput/>
         </div>
     )
 }

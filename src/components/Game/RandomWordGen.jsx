@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import "../../css/randomWord.css"
+import UserInput from './UserInput';
 
-    export default function RandomWordGenerator() {
+const RandomWordGenerator = () => {
         const fiveLetterWordsA = ['apple', 'amber', 'adapt', 'alive', 'amuse', /* add more words */];
         
         const generateRandomWord = () => {
@@ -25,42 +26,27 @@ import "../../css/randomWord.css"
         
         useEffect(() => {
             const charArray = randomWord.split('');
-        
+            
             setFirstLetter(charArray[0]);
             setSecondLetter(charArray[1]);
             setThirdLetter(charArray[2]);
             setFourthLetter(charArray[3]);
             setFifthLetter(charArray[4]);
-          }, [randomWord]);
+        }, [randomWord]);
         
-        //   useEffect(() => {
-        //     console.log("First Letter:", firstLetter);
-        //   }, [firstLetter]);
-        
-        //   useEffect(() => {
-        //     console.log("Second Letter:", secondLetter);
-        //   }, [secondLetter]);
-        
-        //   useEffect(() => {
-        //     console.log("Third Letter:", thirdLetter);
-        //   }, [thirdLetter]);
-        
-        //   useEffect(() => {
-        //     console.log("Fourth Letter:", fourthLetter);
-        //   }, [fourthLetter]);
-        
-        //   useEffect(() => {
-        //     console.log("Fifth Letter:", fifthLetter);
-        //   }, [fifthLetter]);     
-     
-      
-      
-
         return (
             <div>
                 <button className="random-word-btn" onClick={handleGenerateWord}>Generate Word</button>
-                {randomWord && <p className="random-word-output">Random Word: {randomWord}</p>}
-                
+                {randomWord && <p className="random-word-output">Random Word: {randomWord}</p>}                
+                <UserInput 
+                    firstLetter={firstLetter} 
+                    secondLetter={secondLetter}
+                    thirdLetter={thirdLetter}
+                    fourthLetter={fourthLetter}
+                    fifthLetter={fifthLetter}
+                />
             </div>
         )        
     }
+
+    export default RandomWordGenerator;
