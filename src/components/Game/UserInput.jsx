@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "../../css/randomWord.css"
-import RandomWordGenerator from './RandomWordGen';
+import Timer from './Timer';
+import LevelHandler from './LevelHandler';
 
 const UserInput = (props) => {
 
@@ -11,6 +12,9 @@ const UserInput = (props) => {
     const thirdLetter = props.thirdLetter.toUpperCase();
     const fourthLetter = props.fourthLetter.toUpperCase();
     const fifthLetter = props.fifthLetter.toUpperCase();
+
+    const [resetTimer, setResetTimer] = useState(false);
+    const [updateLevel, setUpdatedLevel] = useState(false);
     
     const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     const maxClicks = 5;
@@ -30,25 +34,19 @@ const UserInput = (props) => {
         {
             console.log('Maximum clicks reached. The keyboard is now disabled.');
         }
-        // console.log("First = " + firstLetter)
-        // console.log("Second = " + secondLetter)
-        // console.log("Third = " + thirdLetter)
-        // console.log("Fourth = " + fourthLetter)
-        // console.log("Fifth = " + fifthLetter)
 
-      
         switch (true) {
             case firstLetter === `${letter}`:
             case secondLetter === `${letter}`:
             case thirdLetter === `${letter}`:
             case fourthLetter === `${letter}`:
             case fifthLetter === `${letter}`:
-            console.log(`All letters match ${letter}`);
-            break;
-            default:
-            console.log(`Not all letters match ${letter}`);
+            break;        
         }
-
+        if (fifthLetter === `${letter}`) {
+            setResetTimer(true);
+            setUpdatedLevel(true);
+        }
     };
 
     return (
@@ -63,7 +61,9 @@ const UserInput = (props) => {
                     {letter}
                 </button>
                 ))}
-            </div>            
+            </div>    
+            <Timer resetTimer={resetTimer}/>
+            <LevelHandler updateLevel={updateLevel}/>
         </div>
     );   
   };

@@ -1,6 +1,6 @@
 import { React } from "react";
 import RandomWordGenerator from "../components/Game/RandomWordGen";
-import UserInput from "../components/Game/UserInput";
+import Timer from "../components/Game/Timer";
 import "../css/globalStyle.css";
 
 
@@ -12,7 +12,7 @@ export default function aboutMe() {
             <div className="header">                
                 GAME           
             </div>
-            <RandomWordGenerator/>
+            <RandomWordGenerator/>           
         </div>
     )
 }

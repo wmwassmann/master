@@ -13,3 +13,7 @@
     justify-content: space-between;
     max-width: 2rem;
 }
+
+.tag {
+    color: #333
+}
