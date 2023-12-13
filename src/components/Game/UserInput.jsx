@@ -4,7 +4,7 @@ import Timer from './Timer';
 import LevelHandler from './LevelHandler';
 
 const UserInput = (props) => {
-
+    const nextLevel = props.nextLevel
     // handles the keyboard functionality. We want the state from 
     // RandomWordGen.jsx to pop in here.
     const firstLetter = props.firstLetter.toUpperCase();
@@ -63,7 +63,10 @@ const UserInput = (props) => {
                 ))}
             </div>    
             <Timer resetTimer={resetTimer}/>
-            <LevelHandler updateLevel={updateLevel}/>
+            <LevelHandler 
+                updateLevel={updateLevel}
+                nextLevel={nextLevel}
+            />
         </div>
     );   
   };

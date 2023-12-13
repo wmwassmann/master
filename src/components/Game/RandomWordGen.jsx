@@ -2,9 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import "../../css/randomWord.css"
 import UserInput from './UserInput';
+import LevelHandler from './LevelHandler';
 
 const RandomWordGenerator = () => {  
 
+    const [level, setLevel] = useState("Current Level is ");
+
+    const nextLevel = (lvl) => {
+        setLevel(lvl)
+    }
     const fiveLetterWordsA = ['apple', 'amber', 'adapt', 'alive', 'amuse', /* add more words */];
     const fiveLetterWordsB = ['beach', 'baker', 'badge', 'bloom', 'brave', /* add more words */];
     const fiveLetterWordsC = ['candy', 'champ', 'crisp', 'crown', 'curse', /* add more words */];
@@ -51,7 +57,9 @@ const RandomWordGenerator = () => {
                 thirdLetter={thirdLetter}
                 fourthLetter={fourthLetter}
                 fifthLetter={fifthLetter}
+                nextLevel={nextLevel}
             />
+            <p className='random-word-output'>{level}</p>
         </div>
     )        
 }
