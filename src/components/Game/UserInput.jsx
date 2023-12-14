@@ -4,16 +4,14 @@ import Timer from './Timer';
 import LevelHandler from './LevelHandler';
 
 const UserInput = (props) => {
-    const nextLevel = props.nextLevel;
-    const handleGenerateWord = props.handleGenerateWord;
-    const firstLetter = props.firstLetter.toUpperCase();
-    const secondLetter = props.secondLetter.toUpperCase();
-    const thirdLetter = props.thirdLetter.toUpperCase();
-    const fourthLetter = props.fourthLetter.toUpperCase();
-    const fifthLetter = props.fifthLetter.toUpperCase();
+    const { nextLevel, level, handleGenerateWord, firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter } = props;
 
     const [resetTimer, setResetTimer] = useState(false);
     const [updateLevel, setUpdatedLevel] = useState(false);
+
+    const [result, setResult] = useState("")
+
+    
 
     const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     const maxClicks = 5;
@@ -31,37 +29,36 @@ const UserInput = (props) => {
             console.log('Maximum clicks reached. The keyboard is now disabled.');
         }
 
-        switch (true) {
-            case firstLetter === `${letter}`:
-            case secondLetter === `${letter}`:
-            case thirdLetter === `${letter}`:
-            case fourthLetter === `${letter}`:
-            case fifthLetter === `${letter}`:
-                break;
-        }
-        if (
-            firstLetter !== `${letter}` ||
-            secondLetter !== `${letter}` ||
-            thirdLetter !== `${letter}` ||
-            fourthLetter !== `${letter}` ||
-            fifthLetter !== `${letter}`
-            ) {
+        const isLetterClicked =
+            firstLetter.toUpperCase() === `${letter}` ||
+            secondLetter.toUpperCase() === `${letter}` ||
+            thirdLetter.toUpperCase() === `${letter}` ||
+            fourthLetter.toUpperCase() === `${letter}` ||
+            fifthLetter.toUpperCase() === `${letter}`;
+
+        if (!isLetterClicked) {
             console.log("GAMEOVER");
             resetClicks();
             setResetTimer(true);
-            }
-        if (fifthLetter === `${letter}`) {
+            setResult("FAILED!")
+        }
+
+        if (fifthLetter.toUpperCase() === `${letter}`) {
             resetClicks();
             setResetTimer(true);
-            setUpdatedLevel(true);            
+            setUpdatedLevel(true);
+            setResult("Passed!")
+
         }
-        
     };
 
-    const resetUpdater = () => {
-        setUpdatedLevel(false)
-        console.log("Updated level status (Should be False) = " + updateLevel)
+    const resetTime = () => {
+        setResetTimer(false);
     }
+
+    const resetUpdater = () => {
+        setUpdatedLevel(false);
+    };
 
     const resetClicks = () => {
         setTotalClicks(0);
@@ -75,10 +72,14 @@ const UserInput = (props) => {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: '5px' }}>
                 {alphabet.split('').map((letter) => (
-                    <button key={letter} onClick={() => handleKeyClick(letter)}>
+                    <button
+                        key={letter}
+                        onClick={() => handleKeyClick(letter)}
+                    >
                         {letter}
                     </button>
                 ))}
+
             </div>
             <Timer resetTimer={resetTimer} />
             <LevelHandler
@@ -86,7 +87,9 @@ const UserInput = (props) => {
                 nextLevel={nextLevel}
                 handleGenerateWord={handleGenerateWord}
                 resetUpdater={resetUpdater}
+                resetTime={resetTime}
             />
+           <p className="random-word-output">Game Status: Level {level} {result}</p>
         </div>
     );
 };

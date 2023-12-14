@@ -17,3 +17,38 @@
 .tag {
     color: #333
 }
+
+/* Word Display */
+
+.pie-container {
+    position: relative;
+    width: 200px;
+    height: 200px;  
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .pie-slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    clip-path: polygon(0 0, 100% 0, 50% 75%);
+    background-color: #3498db; /* Adjust the color as needed */
+    transform: rotate(var(--rotation));
+    transform-origin: 100% 50%;
+  }
+    
+  .pie-letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #333; */
+  }
+
+ 

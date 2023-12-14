@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "../../css/randomWord.css"
 import UserInput from './UserInput';
-import LevelHandler from './LevelHandler';
 
 const RandomWordGenerator = () => {
     const [level, setLevel] = useState('A');
-    const levelByLetters = "ABCDEF";
+    const levelByLetters = "ABCDEFGHIJ";
     const [currentLevelIndex, setCurrentLevelIndex] = useState(1);
 
     const nextLevel = () => {
@@ -13,7 +12,23 @@ const RandomWordGenerator = () => {
         const updatedCurrentLetter = levelByLetters[currentLevelIndex];
         setLevel(updatedCurrentLetter);
     };
-
+    
+    
+    const shuffleWord = (word) => {
+        // Convert the word to an array of characters
+        const wordArray = word.split('');
+        
+        // Shuffle the array using Fisher-Yates algorithm
+        for (let i = wordArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [wordArray[i], wordArray[j]] = [wordArray[j], wordArray[i]];
+        }
+        
+        // Convert the array back to a string
+        return wordArray.join('');
+    };  
+    
+    
     const generateRandomWord = () => {
         let fiveLetterWords;
         switch (level) {
@@ -26,27 +41,48 @@ const RandomWordGenerator = () => {
             case 'C':
                 fiveLetterWords = ['candy', 'champ', 'crisp', 'crown', 'curse', /* add more words */];
                 break;
-            // Add cases for other levels as needed
+            case 'D':
+                fiveLetterWords = ['dance', 'drown', 'dealt', 'dream', 'douse', /* add more words */];
+                break;
+            case 'E':
+                fiveLetterWords = ['eager', 'elbow', 'emote', 'equal', 'error', /* add more words */];
+                break;
+            case 'F':
+                fiveLetterWords = ['fable', 'frost', 'frown', 'frame', 'flame', /* add more words */];
+                break;
+            case 'G':
+                fiveLetterWords = ['giant', 'glide', 'grasp', 'grain', 'grind', /* add more words */];
+                break;
+            case 'H':
+                fiveLetterWords = ['happy', 'haste', 'heart', 'heave', 'honey', /* add more words */];
+                break;
+            case 'I':
+                fiveLetterWords = ['image', 'invent', 'input', 'ideal', 'issue', /* add more words */];
+                break;
+            case 'J':
+                fiveLetterWords = ['jazzy', 'jelly', 'jumbo', 'jolts', 'judge', /* add more words */];
+                break;
             default:
                 fiveLetterWords = [];
         }
         const randomIndex = Math.floor(Math.random() * fiveLetterWords.length);
+        
         return fiveLetterWords[randomIndex];
     };
-
+    
     const [randomWord, setRandomWord] = useState(generateRandomWord);
-
+    
     const handleGenerateWord = () => {
         const word = generateRandomWord();
         setRandomWord(word);
     };
-
+    
     const [firstLetter, setFirstLetter] = useState('');
     const [secondLetter, setSecondLetter] = useState('');
     const [thirdLetter, setThirdLetter] = useState('');
     const [fourthLetter, setFourthLetter] = useState('');
     const [fifthLetter, setFifthLetter] = useState('');
-
+    
     useEffect(() => {
         const charArray = randomWord.split('');
         setFirstLetter(charArray[0]);
@@ -55,16 +91,23 @@ const RandomWordGenerator = () => {
         setFourthLetter(charArray[3]);
         setFifthLetter(charArray[4]);
     }, [randomWord]);
-
+    
     useEffect(() => {
         // When the level changes, generate a new random word
         setRandomWord(generateRandomWord());
     }, [level]);
 
+    const scrambledWord = shuffleWord(randomWord);
+    
     return (
         <div>
+            <div className="pie-container">
+                <div className="pie-slice top" style={{ '--rotation': '0deg' }}>{firstLetter}</div>
+                <div className="pie-slice middle" style={{ '--rotation': '72deg' }}>{secondLetter} {thirdLetter}</div>
+                <div className="pie-slice bottom" style={{ '--rotation': '216deg' }}>{fourthLetter} {fifthLetter}</div>    
+            </div>
             <button className="random-word-btn" onClick={handleGenerateWord}>Generate Word</button>
-            {randomWord && <p className="random-word-output">Random Word: {randomWord}</p>}
+            {randomWord && <p className="random-word-output">Random Word: {scrambledWord}</p>}
             <UserInput
                 firstLetter={firstLetter}
                 secondLetter={secondLetter}
@@ -72,9 +115,11 @@ const RandomWordGenerator = () => {
                 fourthLetter={fourthLetter}
                 fifthLetter={fifthLetter}
                 nextLevel={nextLevel}
+                level={currentLevelIndex - 1}
                 handleGenerateWord={handleGenerateWord}
             />
             <p className='random-word-output'>Level = {level}</p>
+            
         </div>
     );
 };

@@ -29,6 +29,7 @@ const Timer = (props) => {
       // Reset the timer when the resetTimerProp becomes true
       if (resetTime === true) {
         setTimer(10);
+        
       }
     }, [resetTime]);
   
