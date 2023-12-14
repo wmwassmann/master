@@ -84,7 +84,7 @@ const RandomWordGenerator = () => {
     const [fifthLetter, setFifthLetter] = useState('');
     
     useEffect(() => {
-        const charArray = randomWord.split('');
+        const charArray = shuffleWord(randomWord).split('');
         setFirstLetter(charArray[0]);
         setSecondLetter(charArray[1]);
         setThirdLetter(charArray[2]);
@@ -101,10 +101,30 @@ const RandomWordGenerator = () => {
     
     return (
         <div>
-            <div className="pie-container">
-                <div className="pie-slice top" style={{ '--rotation': '0deg' }}>{firstLetter}</div>
-                <div className="pie-slice middle" style={{ '--rotation': '72deg' }}>{secondLetter} {thirdLetter}</div>
-                <div className="pie-slice bottom" style={{ '--rotation': '216deg' }}>{fourthLetter} {fifthLetter}</div>    
+            <div className="display-container">
+                <div className="pie-container">
+                    <div className="pie-slice top" style={{ '--rotation': '0deg' }}>
+                        <div className="pie-letter top-letter">
+                            {firstLetter}
+                        </div>
+                    </div>
+                    <div className="pie-slice middle" style={{ '--rotation': '72deg' }}>
+                        <div className="pie-letter middle-left">
+                            {secondLetter} 
+                        </div>
+                        <div className="pie-letter middle-right">
+                            {thirdLetter}
+                        </div>
+                        </div>
+                    <div className="pie-slice bottom" style={{ '--rotation': '216deg' }}>
+                        <div className="pie-letter bottom-left">
+                            {fourthLetter} 
+                        </div>
+                        <div className="pie-letter bottom-right">
+                            {fifthLetter}
+                        </div>
+                    </div>    
+                </div>
             </div>
             <button className="random-word-btn" onClick={handleGenerateWord}>Generate Word</button>
             {randomWord && <p className="random-word-output">Random Word: {scrambledWord}</p>}
