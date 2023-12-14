@@ -11,8 +11,19 @@ const RandomWordGenerator = () => {
         setCurrentLevelIndex((prevIndex) => (prevIndex + 1) % levelByLetters.length);
         const updatedCurrentLetter = levelByLetters[currentLevelIndex];
         setLevel(updatedCurrentLetter);
-    };
-    
+    };    
+
+    const [resetGameSignal, setResetGameSignal] = useState(false);
+
+    const resetGame = () => {
+        setResetGameSignal(true);
+        setLevel("A");
+    }
+
+    const timeSignalToggle = () => {
+        console.log("In Randomizer " + resetGameSignal)
+        setResetGameSignal(false);
+    }
     
     const shuffleWord = (word) => {
         // Convert the word to an array of characters
@@ -75,6 +86,7 @@ const RandomWordGenerator = () => {
     const handleGenerateWord = () => {
         const word = generateRandomWord();
         setRandomWord(word);
+        resetGame();
     };
     
     const [firstLetter, setFirstLetter] = useState('');
@@ -97,7 +109,8 @@ const RandomWordGenerator = () => {
         setRandomWord(generateRandomWord());
     }, [level]);
 
-    const scrambledWord = shuffleWord(randomWord);
+
+
     
     return (
         <div>
@@ -125,17 +138,20 @@ const RandomWordGenerator = () => {
                         </div>
                     </div>    
                 </div>
+                <div className="full-word">{randomWord}</div>
             </div>
             <button className="random-word-btn" onClick={handleGenerateWord}>Generate Word</button>
-            {randomWord && <p className="random-word-output">Random Word: {scrambledWord}</p>}
+            
             <UserInput
                 firstLetter={firstLetter}
                 secondLetter={secondLetter}
                 thirdLetter={thirdLetter}
                 fourthLetter={fourthLetter}
                 fifthLetter={fifthLetter}
-                nextLevel={nextLevel}
+                resetGameSignal={resetGameSignal}
                 level={currentLevelIndex - 1}
+                timeSignalToggle={timeSignalToggle}
+                nextLevel={nextLevel}
                 handleGenerateWord={handleGenerateWord}
             />
             <p className='random-word-output'>Level = {level}</p>

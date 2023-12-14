@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "../../css/randomWord.css"
-import UserInput from './UserInput';
 
 const LevelHandler = (props) => {
     
-    const { nextLevel, resetTime, handleGenerateWord } = props
-    const resetUpdater = props.resetUpdater;
-    const updateLevel =  props.updateLevel;    
-
+    const { nextLevel, resetTime, resetUpdater, updateLevel, handleGenerateWord } = props     
+    
     const [updatedLevel, setUpdateLevel] = useState(updateLevel);   
     
     const levelByLetters = "ABCDEFGHIJ";

@@ -24,8 +24,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   background-color: rgb(83, 83, 83);
-  height: 500px;
+  height: 530px;
+  flex-direction: column;
 }
 
 
@@ -96,4 +98,11 @@
 
   .bottom-right {
     display: flex;
+  }
+
+  /* Full word */
+
+  .full-word {
+    display: flex;
+    padding: 1rem;
   }
