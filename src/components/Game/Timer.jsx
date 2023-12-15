@@ -3,9 +3,11 @@ import "../../css/Timer.css"
 
  
 const Timer = (props) => {
+    const { resetGameSignal, resetGame, resetTimer, gameSignalToggle } = props;
+
     const [timer, setTimer] = useState(0);
-    const { resetGameSignal, resetTime, timeSignalToggle } = props;
-  
+
+
     useEffect(() => {
       let intervalId;
   
@@ -18,7 +20,8 @@ const Timer = (props) => {
         }
 
         if (timer === 0) {
-          timeSignalToggle();
+          resetGame();
+          gameSignalToggle();
         }
       };
   
@@ -31,10 +34,10 @@ const Timer = (props) => {
   
     useEffect(() => {
       // Reset the timer when the resetTimerProp becomes true
-      if (resetTime || resetGameSignal === true) {
+      if (resetTimer || resetGameSignal === true) {
         setTimer(10);        
       }
-    }, [resetTime, resetGameSignal]);
+    }, [resetTimer, resetGameSignal]);
   
     return (
       <div>

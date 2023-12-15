@@ -1,0 +1,10 @@
+.game-status {
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+}

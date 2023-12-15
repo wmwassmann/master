@@ -1,9 +1,30 @@
-.random-word-btn {
-    color: #333
+.start-btn {
+    color: #333;
+    background-color: aqua;
+    display: flex;
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+}
+
+.start-btn:hover {
+  border: solid;
+  border-radius: 98px;
+  font-size: .8rem;
+}
+
+.start-btn-text {
+    color: #333;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .random-word-output {
-    color: #333
+    color: #333;
 }
 
 /* input boxes */
