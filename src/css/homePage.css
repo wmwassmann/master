@@ -9,7 +9,8 @@
 
 .home-info {
     padding: 5rem;
-    font-size: 5rem;
+    width: 500px;
+    font-size: 6rem;
 }
 
 .home-title {
@@ -17,7 +18,7 @@
 }
 
 .home-article {
-    font-size: 1rem; 
+    font-size: 1.5rem; 
     text-align: center;
     padding: .5rem;
 }
