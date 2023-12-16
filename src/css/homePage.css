@@ -3,13 +3,13 @@
 .home-container {
     display: flex;
     color: #131313;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
   }
 
 .home-info {
     padding: 5rem;
-    margin: 5rem;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .home-title {
@@ -17,7 +17,7 @@
 }
 
 .home-article {
-    font-size: 2rem; 
+    font-size: 1rem; 
     text-align: center;
     padding: .5rem;
 }

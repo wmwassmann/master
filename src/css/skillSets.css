@@ -1,0 +1,32 @@
+.skillsets-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .skillset {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 250px; /* Set a fixed height for all skillset containers */
+    width: 200px; /* Set a fixed width for all skillset containers */
+  }
+  
+  .skillset h2 {
+    color: #333;
+  }
+  
+  .skillset ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skillset li {
+    color: #000;
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }

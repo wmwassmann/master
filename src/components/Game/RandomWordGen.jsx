@@ -53,7 +53,7 @@ const RandomWordGenerator = () => {
                 fiveLetterWords = ['apple', 'amber', 'adapt', 'alive', 'amuse', 'acorn', 'audio', 'aloud', 'alias', 'angel'];
                 break;
             case 'B':
-                fiveLetterWords = ['beach', 'baker', 'badge', 'bloom', 'brave', 'blitz', 'blend', 'bonus', 'blitz', 'bless'];
+                fiveLetterWords = ['beach', 'bento', 'badge', 'bloom', 'brave', 'brand', 'blend', 'bonus', 'blitz', 'bless'];
                 break;
             case 'C':
                 fiveLetterWords = ['candy', 'champ', 'crisp', 'crown', 'curse', 'charm', 'chill', 'clerk', 'crane', 'crawl'];
