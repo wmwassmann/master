@@ -1,5 +1,5 @@
 import "./css/globalStyle.css";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
@@ -12,10 +12,10 @@ export default function App() {
         <Navbar /> 
         <Routes>
           {/* routes */}
-          <Route path="master/" element={<HomePage/> } />      
-          <Route path="master/about" element={<AboutMe/>} />
-          <Route path="master/portfolio" element={<Portfolio/>} />
-          <Route path="master/game" element={<Game/>} />
+          <Route index element={<HomePage/> } />      
+          <Route path="/about" element={<AboutMe/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/game" element={<Game/>} />
         </Routes>
     </BrowserRouter>
   )
