@@ -12,10 +12,10 @@ export default function App() {
         <Navbar /> 
         <Routes>
           {/* routes */}
-          <Route index element={<HomePage/> } />      
-          <Route path="about" element={<AboutMe/>} />
-          <Route path="portfolio" element={<Portfolio/>} />
-          <Route path="game" element={<Game/>} />
+          <Route path="master/" element={<HomePage/> } />      
+          <Route path="master/about" element={<AboutMe/>} />
+          <Route path="master/portfolio" element={<Portfolio/>} />
+          <Route path="master/game" element={<Game/>} />
         </Routes>
     </BrowserRouter>
   )
