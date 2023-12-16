@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "../../css/userInput.css";
 import Timer from './Timer';
 import LevelHandler from './LevelHandler';
+import WordReadOut from './WordReadOut';
 
 const UserInput = (props) => {
     const { 
@@ -25,7 +26,7 @@ const UserInput = (props) => {
     const alphabet = 'qwertyuiopasdfghjklzxcvbnm';
     const maxClicks = 5;
     
-
+    
     useEffect(() => {
         const handleKeyDown = (event) => {
             const pressedKey = event.key;
@@ -35,23 +36,23 @@ const UserInput = (props) => {
             } else {
                 console.log('Maximum clicks reached. The keyboard is now disabled.');
             }
-    
+            
             const isLetterClicked =
-                (firstLetter === pressedKey && totalClicks === 0) ||
-                (secondLetter === pressedKey && totalClicks === 1) ||
-                (thirdLetter === pressedKey && totalClicks === 2) ||
-                (fourthLetter === pressedKey && totalClicks === 3) ||
-                (fifthLetter === pressedKey && totalClicks === 4);
-
-           
-        
-    
+            (firstLetter === pressedKey && totalClicks === 0) ||
+            (secondLetter === pressedKey && totalClicks === 1) ||
+            (thirdLetter === pressedKey && totalClicks === 2) ||
+            (fourthLetter === pressedKey && totalClicks === 3) ||
+            (fifthLetter === pressedKey && totalClicks === 4);
+            
+            
+            
+            
             if (!isLetterClicked) {
                 resetClicks();
                 setResetTimer(true);
                 setResult("FAILED!");
             }
-    
+            
             if (fifthLetter === pressedKey && totalClicks === 4) {
                 resetClicks();
                 setResetTimer(true);
@@ -59,7 +60,7 @@ const UserInput = (props) => {
                 setResult("Passed!");
             }
         };
-    
+        
         window.addEventListener('keydown', handleKeyDown);
     
         return () => {
@@ -67,6 +68,9 @@ const UserInput = (props) => {
         };
     }, [totalClicks, firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter]);
     
+    const pressedKey = localStorage.getItem("currentLetter");
+    console.log("Key Pressed " + pressedKey)
+
     const resetTime = () => {
         setResetTimer(false);
     };
@@ -92,9 +96,17 @@ const UserInput = (props) => {
             setResult("")
         }
     }, [level]);
-
+    
     return (
-        <div>
+        <div>   
+                {/* <WordReadOut
+                    firstLetter={firstLetter}
+                    secondLetter={secondLetter}
+                    thirdLetter={thirdLetter}
+                    fourthLetter={fourthLetter}
+                    fifthLetter={fifthLetter}
+                    pressedKey={pressedKey}
+                />          */}
             <div className="timer-container">
                 <Timer 
                     resetTimer={resetTimer}
@@ -114,6 +126,7 @@ const UserInput = (props) => {
                 resetUpdater={resetUpdater}
                 resetTime={resetTime}
             />
+            
         </div>
     );
 };

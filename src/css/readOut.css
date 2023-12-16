@@ -1,0 +1,15 @@
+.word-container {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+  }
+  
+  p {
+    margin: 0 5px;
+  }
+  
+  .highlighted-letter {
+    color: black; /* Change the color to your desired highlighting style */
+    font-weight: bold; /* Add any other styling you want for the highlighted letter */
+    visibility: visible;
+  }
