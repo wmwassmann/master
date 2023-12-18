@@ -19,7 +19,7 @@ const Skillsets = () => {
       </div>
 
       <div className="skillset">
-        <h2>Web Development</h2>
+        <h2>Development</h2>
         <ul>
           {webDevelopmentSkills.map((skill, index) => (
             <li key={index}>{skill}</li>

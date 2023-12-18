@@ -8,10 +8,7 @@ export default function aboutMe() {
 
 
     return (
-        <div>
-            <div className="header">                
-                GAME           
-            </div>
+        <div>          
             <RandomWordGenerator/>           
         </div>
     )

@@ -23,13 +23,13 @@ const UserInput = (props) => {
     const [updateLevel, setUpdatedLevel] = useState(false);
     const [totalClicks, setTotalClicks] = useState(0);
     const [result, setResult] = useState("");
-    const alphabet = 'qwertyuiopasdfghjklzxcvbnm';
     const maxClicks = 5;
-    
+    const alphabet = 'QWERTYUIOPASDFGHJKLZXCVBNM';
     
     useEffect(() => {
         const handleKeyDown = (event) => {
-            const pressedKey = event.key;
+            const pressedKey = event.key.toUpperCase();
+            // const pressedKey = event.key;
             if (totalClicks < maxClicks && alphabet.includes(pressedKey)) {
                 localStorage.setItem('currentLetter', pressedKey);
                 setTotalClicks((prevClicks) => prevClicks + 1);
@@ -38,12 +38,13 @@ const UserInput = (props) => {
             }
             
             const isLetterClicked =
-            (firstLetter === pressedKey && totalClicks === 0) ||
-            (secondLetter === pressedKey && totalClicks === 1) ||
-            (thirdLetter === pressedKey && totalClicks === 2) ||
-            (fourthLetter === pressedKey && totalClicks === 3) ||
-            (fifthLetter === pressedKey && totalClicks === 4);
+                (firstLetter === pressedKey && totalClicks === 0) ||
+                (secondLetter === pressedKey && totalClicks === 1) ||
+                (thirdLetter === pressedKey && totalClicks === 2) ||
+                (fourthLetter === pressedKey && totalClicks === 3) ||
+                (fifthLetter === pressedKey && totalClicks === 4);
             
+            console.log("Click = " + pressedKey + " and word = " + firstLetter + secondLetter + thirdLetter + fourthLetter + fifthLetter )
             
             
             
@@ -69,7 +70,6 @@ const UserInput = (props) => {
     }, [totalClicks, firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter]);
     
     const pressedKey = localStorage.getItem("currentLetter");
-    console.log("Key Pressed " + pressedKey)
 
     const resetTime = () => {
         setResetTimer(false);
@@ -87,26 +87,21 @@ const UserInput = (props) => {
         // Reset the timer when the resetTimerProp becomes true
         if (resetGameSignal === true) {            
             gameSignalToggle();
-        }
-    }, [resetGameSignal]);
-
-    
-    useEffect(() => {        
-        if (level === 0) {            
             setResult("")
         }
-    }, [level]);
+    }, [resetGameSignal]);   
     
+
     return (
         <div>   
-                {/* <WordReadOut
+                <WordReadOut
                     firstLetter={firstLetter}
                     secondLetter={secondLetter}
                     thirdLetter={thirdLetter}
                     fourthLetter={fourthLetter}
                     fifthLetter={fifthLetter}
                     pressedKey={pressedKey}
-                />          */}
+                />         
             <div className="timer-container">
                 <Timer 
                     resetTimer={resetTimer}

@@ -4,16 +4,16 @@ import "../css/navBar.css"
 
 export default function Navbar() {
     return <nav className="navbar-container">
-        <Link to="/" className="site-title">William Wassmann</Link>
+        <Link to="/" className="site-title">W</Link>
         <ul>
             <li>
-               <Link to="/about" className="title-name">About</Link>
+               <Link to="/resume" className="title-name">// Resume</Link>
             </li>
             <li>
-               <Link to="/portfolio" className="title-name">Portfolio</Link>
+               <Link to="/portfolio" className="title-name">// Portfolio</Link>
             </li>
             <li>
-               <Link to="/game" className="title-name">Game</Link>
+               <Link to="/game" className="title-name">// Fun(?)</Link>
             </li>
         </ul>
     </nav>

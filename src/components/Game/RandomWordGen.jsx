@@ -50,52 +50,52 @@ const RandomWordGenerator = () => {
         let fiveLetterWords;
         switch (level) {
             case 'A':
-                fiveLetterWords = ['apple', 'amber', 'adapt', 'alive', 'amuse', 'acorn', 'audio', 'aloud', 'alias', 'angel'];
+                fiveLetterWords = ['APPLE', 'AMBER', 'ADAPT', 'ALIVE', 'AMUSE', 'ACORN', 'AUDIO', 'ALOUD', 'ALIAS', 'ANGEL'];
                 break;
             case 'B':
-                fiveLetterWords = ['beach', 'bento', 'badge', 'bloom', 'brave', 'brand', 'blend', 'bonus', 'blitz', 'bless'];
+                fiveLetterWords = ['BEACH', 'BENTO', 'BADGE', 'BLOOM', 'BRAVE', 'BRAND', 'BLEND', 'BONUS', 'BLITZ', 'BLESS'];
                 break;
             case 'C':
-                fiveLetterWords = ['candy', 'champ', 'crisp', 'crown', 'curse', 'charm', 'chill', 'clerk', 'crane', 'crawl'];
+                fiveLetterWords = ['CANDY', 'CHAMP', 'CRISP', 'CROWN', 'CURSE', 'CHARM', 'CHILL', 'CLERK', 'CRANE', 'CRAWL'];
                 break;
             case 'D':
-                fiveLetterWords = ['dance', 'drown', 'dealt', 'dream', 'douse', 'diner', 'daisy', 'dwarf', 'drape', 'drain'];
+                fiveLetterWords = ['DANCE', 'DROWN', 'DEALT', 'DREAM', 'DOUSE', 'DINER', 'DAISY', 'DWARF', 'DRAPE', 'DRAIN'];
                 break;
             case 'E':
-                fiveLetterWords = ['eager', 'elbow', 'emote', 'equal', 'error', 'entry', 'elite', 'erase', 'excel', 'essay'];
+                fiveLetterWords = ['EAGER', 'ELBOW', 'EMOTE', 'EQUAL', 'ERROR', 'ENTRY', 'ELITE', 'ERASE', 'EXCEL', 'ESSAY'];
                 break;
             case 'F':
-                fiveLetterWords = ['fable', 'frost', 'frown', 'frame', 'flame', 'fable', 'flair', 'fleet', 'flush', 'fable'];
+                fiveLetterWords = ['FABLE', 'FROST', 'FROWN', 'FRAME', 'FLAME', 'FABLE', 'FLAIR', 'FLEET', 'FLUSH', 'FABLE'];
                 break;
             case 'G':
-                fiveLetterWords = ['giant', 'glide', 'grasp', 'grain', 'grind', 'globe', 'glare', 'graze', 'glint', 'gloss'];
+                fiveLetterWords = ['GIANT', 'GLIDE', 'GRASP', 'GRAIN', 'GRIND', 'GLOBE', 'GLARE', 'GRAZE', 'GLINT', 'GLOSS'];
                 break;
             case 'H':
-                fiveLetterWords = ['happy', 'haste', 'heart', 'heave', 'honey', 'haste', 'hatch', 'haunt', 'hover', 'humor'];
+                fiveLetterWords = ['HAPPY', 'HASTE', 'HEART', 'HEAVE', 'HONEY', 'HASTE', 'HATCH', 'HAUNT', 'HOVER', 'HUMOR'];
                 break;
             case 'I':
-                fiveLetterWords = ['image', 'input', 'ideal', 'issue', 'image', 'itchy', 'inlay', 'irate', 'ivory', 'index'];
+                fiveLetterWords = ['IMAGE', 'INPUT', 'IDEAL', 'ISSUE', 'IMAGE', 'ITCHY', 'INLAY', 'IRATE', 'IVORY', 'INDEX'];
                 break;
             case 'J':
-                fiveLetterWords = ['jazzy', 'jelly', 'jumbo', 'jolts', 'judge', 'jolly', 'joint', 'joust', 'jaded', 'juicy'];
+                fiveLetterWords = ['JAZZY', 'JELLY', 'JUMBO', 'JOLTS', 'JUDGE', 'JOLLY', 'JOINT', 'JOUST', 'JADED', 'JUICY'];
                 break;
             case 'K':
-                fiveLetterWords = ['kayak', 'keeps', 'kiwi', 'knead', 'knock', 'knight', 'knots', 'knurl', 'kudos', 'kyrie'];
+                fiveLetterWords = ['KAYAK', 'KEEPS', 'KIWI', 'KNEAD', 'KNOCK', 'KNIGHT', 'KNOTS', 'KNURL', 'KUDOS', 'KYRIE'];
                 break;
             case 'L':
-                fiveLetterWords = ['labor', 'latch', 'liver', 'lemon', 'lunar', 'label', 'lucid', 'lilac', 'laser', 'limit'];
+                fiveLetterWords = ['LABOR', 'LATCH', 'LIVER', 'LEMON', 'LUNAR', 'LABEL', 'LUCID', 'LILAC', 'LASER', 'LIMIT'];
                 break;
             case 'M':
-                fiveLetterWords = ['mango', 'mirth', 'motel', 'moose', 'mints', 'mirth', 'modal', 'mucus', 'mango', 'magic'];
+                fiveLetterWords = ['MANGO', 'MIRTH', 'MOTEL', 'MOOSE', 'MINTS', 'MIRTH', 'MODAL', 'MUCUS', 'MANGO', 'MAGIC'];
                 break;
             case 'N':
-                fiveLetterWords = ['noble', 'nymph', 'novel', 'nudge', 'nylon', 'noble', 'nerdy', 'niece', 'noble', 'nifty'];
+                fiveLetterWords = ['NOBLE', 'NYMPH', 'NOVEL', 'NUDGE', 'NYLON', 'NOBLE', 'NERDY', 'NIECE', 'NOBLE', 'NIFTY'];
                 break;
             case 'O':
-                fiveLetterWords = ['oasis', 'overt', 'opera', 'ounce', 'ocean', 'olive', 'onset', 'oasis', 'orbit', 'often'];
+                fiveLetterWords = ['OASIS', 'OVERT', 'OPERA', 'OUNCE', 'OCEAN', 'OLIVE', 'ONSET', 'OASIS', 'ORBIT', 'OFTEN'];
                 break;
             case 'P':
-                fiveLetterWords = ['plush', 'prize', 'pouch', 'piano', 'pilot', 'plush', 'proud', 'panda', 'peach', 'plume'];
+                fiveLetterWords = ['PLUSH', 'PRIZE', 'POUCH', 'PIANO', 'PILOT', 'PLUSH', 'PROUD', 'PANDA', 'PEACH', 'PLUME'];
                 break;
             default:
                 fiveLetterWords = [];
