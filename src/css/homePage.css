@@ -9,6 +9,7 @@
 
 .home-info {
     padding: 5rem;
+    padding-top: 10rem;
     width: 530px;
     display: flex;
     flex-direction: column;

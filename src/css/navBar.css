@@ -5,13 +5,18 @@
 /* Navbar Global */
 
 .navbar-container {
-    background: #131313;
-    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f7f7f7;
+    color: hsl(0, 0%, 100%);
+    border-bottom: 1.5px solid #ccc;
+    padding: 10px;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 3rem;
+    align-items: center;
 }
 
 .navbar-container ul {
@@ -32,16 +37,28 @@
 }
 
 .navbar-container li.active {
-    background-color: rgb(117, 117, 117);
+    background-color: #fff;
+    color: #333; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
-.navbar-container li:hover, .site-title:hover {
-    background-color: rgb(119, 119, 119);
+.navbar-container li:hover,
+.site-title:hover {
+    background-color: #777; 
+    transition: background-color 0.3s; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 100%);
+    transform: skew(-20deg);
 }
-
-
 /* Navbar Items */
 
 .site-title {
-    font-size: 3rem;
+    font-size: 4rem;
+    color: #333;
+    margin-left: 2rem;
+}
+
+.title-name {
+    font-size: 1.1rem;
+    color: #333;
 }
