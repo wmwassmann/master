@@ -1,11 +1,20 @@
-import React from 'react';
-import "../css/skillSets.css"
+import React, { useEffect, useState } from 'react';
+import "../css/skillSets.css";
 
 const Skillsets = () => {
   const languageSkills = ['C#', 'JavaScript', 'Python'];
   const webDevelopmentSkills = ['React', 'Node.js', 'HTML/CSS'];
   const databaseSkills = ['MySQL', 'MongoDB', 'Kusto'];
   const managementSkills = ['Git', 'Visual Studio', 'Agile'];
+
+  const [animationDelay, setAnimationDelay] = useState(0.2); // Adjust the delay time (in seconds) between each skillset
+
+  useEffect(() => {
+    const skillsets = document.querySelectorAll('.skillset');
+    skillsets.forEach((skillset, index) => {
+      skillset.style.animationDelay = `${index * animationDelay}s`;
+    });
+  }, [animationDelay]);
 
   return (
     <div className="skillsets-container">
