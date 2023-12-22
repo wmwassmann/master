@@ -2,7 +2,20 @@ body {
     background: #f7f7f7;
     color: hsl(0, 0%, 100%);
     margin: 0 auto;
+    max-width: 2300px;
   }
 
+button {
+  background-color: initial;
+  color: initial;
+  border: initial;
+  /* Add other styles you want to reset */
+}
 
+a {
+  background-color: initial;
+  color: initial;
+  border: initial;
+  text-decoration: none;
 
+}

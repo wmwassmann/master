@@ -7,10 +7,10 @@
     justify-content: space-around;
     padding: 20px;
     overflow: hidden;
-    height: 100vh;
+    height: 100vh;    
 }
 
-.home-info {
+.home-info {    
     padding: 5rem;
     padding-top: 1rem;
     width: 530px;
@@ -22,8 +22,29 @@
     transition: transform 0.5s ease-in-out;
 }
 
+.link {
+    display: flex;
+    flex-direction: column;
+}
+
+.link.active {
+    background-color: #fff;
+    color: #333; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.link:hover {
+    background-color: #777; 
+    transition: background-color 0.3s; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 100%);
+    transform: skew(-20deg);
+}
+
 .home-title {
     text-align: center;
+    display: flex;
+    align-self: center;
 }
 
 .home-article {
@@ -34,29 +55,57 @@
 }
 
 .left {
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in-out;
+    animation-duration: .4s;
+    animation-name: slideInLeft;
 }
 
 .right {
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in-out;
+    animation-duration: .4s;
+    animation-name: slideInRight;
 }
 
-.scrolled .left {
-    transform: translateX(-500%);
+@keyframes slideInLeft {
+    from {
+        margin-right: 50%;
+    }
+    to {
+        margin-right: 0%;
+    }
 }
 
-.scrolled .right {
-    transform: translateX(500%);
+@keyframes slideInRight {
+    from {
+        margin-left: 50%;
+    }
+    to {
+        margin-left: 0%;
+    }
 }
 
-.about-translate {
-    transform: translateY(0%);
-    transition: transform 0.1s ease-in-out;
+.center-title {
+    display: flex;
+    opacity: 0;
+    color: black;
+    padding-bottom: 30rem;
+    animation: fadeIn 0.5s ease forwards;
+    font-family:'Arial', sans-serif;
+    flex-direction: column;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    align-items: center;
 }
 
-.scrolled .about-translate {
-    transform: translateY(-70%);
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
+.github {
+    font-size: 1rem;    
+}

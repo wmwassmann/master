@@ -12,7 +12,7 @@ export default function Navbar() {
                <Link to="/resume">// Resume</Link>
             </li>
             <li  className="title-name">
-               <Link to="/portfolio">// Portfolio</Link>
+               <Link to="/contact">// Contact</Link>
             </li>
             <li  className="title-name">
                <Link to="/game">// Fun(?)</Link>

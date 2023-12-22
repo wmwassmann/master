@@ -1,52 +1,47 @@
 import React, { useState, useEffect } from "react";
 import "../css/homePage.css"
-import AboutMe from "./AboutMe";
+import { Link } from 'react-router-dom';
 
 const homePage =()=> {
 
-    const [scrolled, setScrolled] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const homeContainer = document.querySelector('.home-container');
-  
-        if (scrollY > homeContainer.offsetTop) {
-          setScrolled(true);          
-        } else {
-          setScrolled(false);
-        }
-      };
-  
-      document.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        document.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+  const [animationDelay, setAnimationDelay] = useState(1);
+
+  useEffect(() => {
+    const titles = document.querySelectorAll('.center-title');
+    titles.forEach(title => {
+      title.style.animationDelay = `${animationDelay}s`;
+    });
+  }, [animationDelay]);
   
     return (
       <div>
-        <div className={`home-container${scrolled ? ' scrolled' : ''}`}>
-          <div className="home-info left">
-            <div className="home-title">software</div>
+      <div className="home-container">
+        <div className="home-info left">
+            <div className="home-title">
+             software
+            </div>
             <div className="home-article">
               Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems
             </div>
-          </div>
-          <div className="home-info right">
-            <div className="home-title">design</div>
-            <div className="home-article">
-              Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
-            </div>
-          </div>
         </div>
-        <div className={`about-container${scrolled ? ' scrolled' : ''}`}>
-            <div className="about-translate">
-                <AboutMe />
+            <div className="center-title">
+              <div className="title-name">
+                  William Wassmann                            
+              </div>
+              <div className="github">
+                <Link className="link" to="https://github.com/wmwassmann/master" target="_blank" rel="noopener noreferrer">
+                  &lt;a&gt;github&lt;/a&gt;
+                </Link>
+              </div>
             </div>
+        <div className="home-info right">
+          <div className="home-title">design</div>
+          <div className="home-article">
+            Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
+          </div>
         </div>
       </div>
+    </div>
     );
   };
 
