@@ -143,7 +143,7 @@ const RandomWordGenerator = () => {
         setScrambledFourthLetter(scrambledArray[3]);
         setScrambledFifthLetter(scrambledArray[4]);
     }, [randomWord]);    
-
+    
     useEffect(() => {
         // When the level changes, generate a new random word
         setRandomWord(generateRandomWord());
@@ -180,9 +180,6 @@ const RandomWordGenerator = () => {
                         </div>
                     </div>    
                 </div>
-                <div className="full-word">{}</div>
-            </div>
-            
             <UserInput
                 firstLetter={firstLetter}
                 secondLetter={secondLetter}
@@ -196,6 +193,9 @@ const RandomWordGenerator = () => {
                 nextLevel={nextLevel}
                 handleGenerateWord={handleGenerateWord}
             />   
+                <div className="full-word">{}</div>
+            </div>
+            
         </div>
     );
 };

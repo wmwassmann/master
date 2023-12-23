@@ -48,10 +48,9 @@
   padding: 1rem;
   margin-top: 15rem;
   background-color: rgb(255, 255, 255);
-  height: 530px;
+  height: 700px;
   flex-direction: column;
 }
-
 
 .pie-container {
     position: relative;
