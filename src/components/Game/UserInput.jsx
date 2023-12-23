@@ -110,8 +110,7 @@ const UserInput = (props) => {
                     resetGame={resetGame}
                 />
             </div>
-            <p className="game-status">Game Status: Level {level} {result}</p>
-            <p className="random-word-output">Total Clicks: {totalClicks}</p>           
+            <p className="game-status">Game Status: Level {level} {result}</p>               
             <LevelHandler
                 updateLevel={updateLevel}
                 nextLevel={nextLevel}

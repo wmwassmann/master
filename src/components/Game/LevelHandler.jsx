@@ -45,9 +45,7 @@ const LevelHandler = (props) => {
     
     return (
         <div>
-            <h2 className='tag'>Highest Level: {currentLetter}</h2>
-           
-            <button className="random-word-output" onClick={handleNextLevel}>next</button>             
+            <h2 className='tag'>Highest Level: {currentLetter}</h2>          
         </div>
     );
 };

@@ -12,11 +12,10 @@ const Timer = (props) => {
       let intervalId;
   
       const decrementTimer = () => {
-        // Check if the timer is already at zero
         if (timer > 0) {
           setTimer((prevTimer) => prevTimer - 1);
         } else {
-          clearInterval(intervalId); // Stop the timer if already at zero
+          clearInterval(intervalId);
         }
 
         if (timer === 0) {
@@ -33,7 +32,6 @@ const Timer = (props) => {
     }, [timer]);
   
     useEffect(() => {
-      // Reset the timer when the resetTimerProp becomes true
       if (resetTimer || resetGameSignal === true) {
         setTimer(10);        
       }
@@ -42,7 +40,6 @@ const Timer = (props) => {
     return (
       <div>
         <p className='timer-counter'>{timer === 0 ? 'GAME OVER' : `Timer: ${timer}s`}</p>
-        {/* Additional UI or functionality of your component */}
       </div>
     );
   };

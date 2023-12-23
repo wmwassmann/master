@@ -195,9 +195,7 @@ const RandomWordGenerator = () => {
                 resetGame={resetGame}
                 nextLevel={nextLevel}
                 handleGenerateWord={handleGenerateWord}
-            />
-            <button className='random-word-output' onClick={nextLevel}>Level = {level}</button>
-            
+            />   
         </div>
     );
 };
