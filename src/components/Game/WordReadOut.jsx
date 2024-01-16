@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../css/readOut.css';
+import '../../css/ComponentStyles/Game/readOut.css';
 
 const WordReadOut = (props) => {
   const { firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter } = props;

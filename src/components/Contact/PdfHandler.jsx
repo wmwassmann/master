@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Pdf from '../../assets/Resume.pdf';
-import "../../css/aboutMe.css"
+import "../../css/PageStyles/AboutMe/aboutMe.css"
 
 class Download extends Component {
 

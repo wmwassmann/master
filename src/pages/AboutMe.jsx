@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/aboutMe.css';
+import '../css/PageStyles/AboutMe/aboutMe.css';
 import headshot from '../assets/headshot.jpg'
 import Download from '../components/Contact/PdfHandler';
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "../css/skillSets.css";
+import "../css/PageStyles/AboutMe/skillSets.css";
 
 const Skillsets = () => {
   const languageSkills = ['C#', 'JavaScript', 'Python'];

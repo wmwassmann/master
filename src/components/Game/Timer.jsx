@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/Timer.css"
+import "../../css/ComponentStyles/Game/Timer.css"
 
  
 const Timer = (props) => {

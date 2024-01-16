@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/randomWord.css"
+import "../../css/ComponentStyles/Game/randomWord.css"
 import UserInput from './UserInput';
 
 const RandomWordGenerator = () => {
