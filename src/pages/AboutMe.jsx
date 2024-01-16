@@ -1,11 +1,19 @@
 import React from 'react';
 import '../css/aboutMe.css';
 import headshot from '../assets/headshot.jpg'
+import Download from '../components/Contact/PdfHandler';
 
 const AboutMe = () => {
   return (
     <div className="readme-container">
-      <h1>README.md</h1>
+      <div className='header-container'>
+        <h1>
+          README.md
+        </h1>
+        <h1>
+          <Download />
+        </h1>
+      </div>
       <div className='headshot-container'>
         <img src={headshot} className='headshot' alt="Me" />
         <p>

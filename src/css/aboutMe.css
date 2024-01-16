@@ -2,15 +2,20 @@
   padding-top: 10rem;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .readme-container {
-    max-width: 600px;
+    max-width: 35vw;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f8f8f8;
     font-family: 'Arial', sans-serif;
-  } 
- 
+  }  
 
 
   h1 {
@@ -42,4 +47,9 @@
     max-height: 100%;    
     width: 30%;
     align-self: flex-start;
+  }
+
+
+  .pdf-button {
+    display: flex;
   }
