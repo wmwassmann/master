@@ -1,15 +1,43 @@
 .resume-container {
+  display: flex; 
+  justify-content: center;
+}
+
+.about-me {
   padding-top: 10rem;
 }
 
+.sub-header {
+  font-size: 1.1rem;
+}
+
 .header-container {
+  font-size: 1.2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.pdf-button {   
+  font-size: 2rem;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 3px solid #ccc;
+  align-self: center;  
+  margin: 0.5rem;
+}
+
+.pdf-button:hover {
+  background-color: #777; 
+  transition: background-color 0.3s; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  color: hsl(0, 0%, 100%);
+  transform: skew(-20deg);
 }
 
 .readme-container {
-    max-width: 35vw;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -21,13 +49,14 @@
   h1 {
     color: #333;
     margin-bottom: 15px;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   p {
+    text-align: justify;
     line-height: 1.6;
     color: #555;
-    /* padding: 1rem; */
+    font-size: 1.1rem;
   }
 
   .text-body {
@@ -39,17 +68,30 @@
     max-width: 100%;
     max-height: 100%;
     display: flex;
-    margin: 20px;
+    padding: .5rem;
   }
 
   .headshot {
-    max-width: 100%; 
-    max-height: 100%;    
+    max-height: 350px;    
     width: 30%;
     align-self: flex-start;
   }
 
-
-  .pdf-button {
-    display: flex;
+  @media screen and (min-width: 600px) {
+    p {
+      font-size: 1.2rem;
+    }
   }
+  
+  @media screen and (min-width: 1800px) {
+    p {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media screen and (min-width: 2468px) {
+    p {
+      font-size: 2.0rem;
+    }
+  }
+

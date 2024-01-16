@@ -25,7 +25,7 @@ const homePage =()=> {
             </div>
         </div>
             <div className="center-title">
-              <div className="title-name">
+              <div className="name">
                   William Wassmann                            
               </div>
               <div className="github">

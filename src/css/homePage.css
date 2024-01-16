@@ -22,9 +22,14 @@
     transition: transform 0.5s ease-in-out;
 }
 
+.name {
+    font-size: 2rem;
+}
+
 .link {
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
 .link.active {
@@ -108,4 +113,9 @@
 
 .github {
     font-size: 1rem;    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;    
+    align-self: center;  
+    margin: 0.5rem;
 }

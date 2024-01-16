@@ -8,11 +8,11 @@ const AboutMe = () => {
     <div className="readme-container">
       <div className='header-container'>
         <h1>
-          README.md
-        </h1>
-        <h1>
-          <Download />
-        </h1>
+          William Wassmann
+          <h3 className='sub-header'>
+            README.md
+          </h3>
+        </h1>      
       </div>
       <div className='headshot-container'>
         <img src={headshot} className='headshot' alt="Me" />
@@ -29,6 +29,9 @@ const AboutMe = () => {
       <p className='text-body'>
         I am passionate about leveraging technology to solve complex problems, and I am committed to continuous learning and professional growth to stay at the forefront of the rapidly advancing tech industry.
       </p>
+        <button className='pdf-button'>
+          <Download />
+        </button>
     </div>
   );
 };

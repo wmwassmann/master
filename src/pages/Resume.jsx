@@ -7,11 +7,11 @@ import AboutMe from "./AboutMe";
 
 export default function skillSet() {
     return (
-        <div>
-            <div className="resume-container">
+        <div className="resume-container">
+            <div className="about-me">
                 <AboutMe/>
             </div>
-            <div className="header">            
+            <div className="skill-blocks">            
                 <Skillsets/>
             </div>
         </div>

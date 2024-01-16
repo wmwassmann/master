@@ -1,22 +1,19 @@
 .skillsets-container {
     display: flex;
-    justify-content: space-around;
     padding: 20px;
-    /* max-width: 50vw; */
-    /* width: 35vw; */
+    padding-top: 16rem;
   }
   
   .skillset {
     text-align: center;
     background-color: #fff;
     padding: 20px;
-    /* border-radius: 8px; */
+    margin-left: 10rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 250px;
     width: 200px; 
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-     
+    animation: fadeIn 0.5s ease forwards;     
   }
   
   @keyframes fadeIn {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import "../css/contactInfo.css"
-import Download from './Contact/PdfHandler';
 
 const ContactInfo = () => {  
 
@@ -14,8 +13,7 @@ const ContactInfo = () => {
           ))} */}
         {/* </ul> */}
         <div>In progress</div>
-      </div>
-      <Download />
+      </div>    
     </div>
   );
 };
