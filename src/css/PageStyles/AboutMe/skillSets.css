@@ -1,17 +1,17 @@
 .skillsets-container {
     display: flex;
-    padding: 20px;
-    padding-top: 16rem;
+    padding: 20px;   
+    justify-content: center;
   }
   
   .skillset {
     text-align: center;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 20px;
-    margin-left: 10rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-left: 10rem; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     height: 250px;
-    width: 200px; 
+    width: 300px; 
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;     
   }
@@ -37,4 +37,64 @@
     margin: 8px 0;
     font-size: 16px;
     font-weight: bold;
+  }
+
+
+  /* ============================== TRANSLATION ===================================== */
+
+  /* Language */
+  @keyframes moveLeftUp {
+    to {
+      opacity: 1;
+      transform: translateX(-380px) translateY(-400px); 
+    }
+  }
+  
+  /* Development */
+  @keyframes moveLeftDown {
+    to {
+      opacity: 1;
+      transform: translateY(-450px) translateX(-110px); 
+    }
+  }  
+  
+  /* Databases */
+  @keyframes moveRightUp {
+    to {
+      opacity: 1;
+      transform: translateY(300px) translateX(110px); 
+    }
+  }
+  /* Management */
+  @keyframes moveRightDown {
+    to {
+      opacity: 1;
+      transform: translateX(400px) translateY(300px); 
+    }
+  }
+  
+  .lan {
+    opacity: 0;
+    transform: translateX(0), translateY(0); 
+    animation: moveLeftUp 1s forwards; 
+  }
+
+
+  .dev {
+    opacity: 0;
+    transform: translateX(0), translateY(0);
+    animation: moveLeftDown 1s forwards;
+  }
+
+  .data {
+    opacity: 0;
+    transform: translateX(0), translateY(0);
+    animation: moveRightUp 1s forwards;
+  }
+
+
+  .man {
+    opacity: 0;
+    transform: translateX(0), translateY(0);
+    animation: moveRightDown 1s forwards; 
   }

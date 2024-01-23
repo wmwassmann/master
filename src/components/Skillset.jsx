@@ -19,41 +19,41 @@ const Skillsets = () => {
   return (
     <div>
       <div className="skillsets-container">
-        <div className="skillset">
+        <div className="skillset lan">
           <h2>Languages</h2>
-          <ul>
+          {/* <ul>
             {languageSkills.map((language, index) => (
               <li key={index}>{language}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
-        <div className="skillset">
-          <h2>Development</h2>
-          <ul>
-            {webDevelopmentSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="skillsets-container">
-        <div className="skillset">
+        <div className="skillset data">
           <h2>Databases</h2>
-          <ul>
+          {/* <ul>
             {databaseSkills.map((database, index) => (
               <li key={index}>{database}</li>
             ))}
-          </ul>
+          </ul> */}
+        </div>
+      </div>
+      <div className="skillsets-container">
+        <div className="skillset dev">
+          <h2>Development</h2>
+          {/* <ul>
+            {webDevelopmentSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul> */}
         </div>
 
-        <div className="skillset">
+        <div className="skillset man">
           <h2>Management</h2>
-          <ul>
+          {/* <ul>
             {managementSkills.map((management, index) => (
               <li key={index}>{management}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

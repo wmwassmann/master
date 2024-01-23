@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/PageStyles/HomePage/homePage.css"
+import Skillsets from "../components/Skillset";
 import { Link } from 'react-router-dom';
 
 const homePage =()=> {
@@ -24,6 +25,7 @@ const homePage =()=> {
               Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems
             </div>
         </div>
+          <div>
             <div className="center-title">
               <div className="name">
                   William Wassmann                            
@@ -34,6 +36,10 @@ const homePage =()=> {
                 </Link>
               </div>
             </div>
+                <div className="skill-blocks">            
+                  <Skillsets/>
+              </div>
+          </div>
         <div className="home-info right">
           <div className="home-title">design</div>
           <div className="home-article">

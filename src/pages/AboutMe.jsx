@@ -8,10 +8,7 @@ const AboutMe = () => {
     <div className="readme-container">
       <div className='header-container'>
         <h1>
-          William Wassmann
-          <h3 className='sub-header'>
-            README.md
-          </h3>
+          William Wassmann         
         </h1>      
       </div>
       <div className='headshot-container'>

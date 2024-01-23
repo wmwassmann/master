@@ -11,9 +11,9 @@ export default function skillSet() {
             <div className="about-me">
                 <AboutMe/>
             </div>
-            <div className="skill-blocks">            
+            {/* <div className="skill-blocks">            
                 <Skillsets/>
-            </div>
+            </div> */}
         </div>
     )
 }
