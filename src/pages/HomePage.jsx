@@ -26,19 +26,18 @@ const homePage =()=> {
             </div>
         </div>
           <div>
-            <div className="center-title">
-              <div className="name">
-                  William Wassmann                            
-              </div>
+            <div className="center-title">             
               <div className="github">
                 <Link className="link" to="https://github.com/wmwassmann/master" target="_blank" rel="noopener noreferrer">
-                  &lt;a&gt;github&lt;/a&gt;
+                  <div className="link-title">
+                    GitHub
+                  </div>
                 </Link>
               </div>
             </div>
-                <div className="skill-blocks">            
-                  <Skillsets/>
-              </div>
+            <div className="skill-blocks">            
+              <Skillsets/>
+            </div>
           </div>
         <div className="home-info right">
           <div className="home-title">design</div>

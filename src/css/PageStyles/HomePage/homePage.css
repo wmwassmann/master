@@ -30,7 +30,15 @@
 .link {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    position: relative;
+    padding: 15px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 3%);
+    transform: skew(-20deg);
+}
+
+.link-title {
+    transform: skew(20deg);
 }
 
 .link.active {
@@ -110,10 +118,11 @@
 }
 
 .github {
-    font-size: 1rem;    
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;    
-    align-self: center;  
-    margin: 0.5rem;
+    display: flex;
+    font-size: 2rem;    
+    padding: 100px; 
+    Margin: 50px 20px 15px 20px; 
+    justify-content: center;
+    align-self: center;     
+
 }

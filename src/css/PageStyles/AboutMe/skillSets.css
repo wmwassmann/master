@@ -1,6 +1,6 @@
 .skillsets-container {
     display: flex;
-    padding: 20px;   
+    padding: 2px;   
     justify-content: center;
   }
   
@@ -46,7 +46,7 @@
   @keyframes moveLeftUp {
     to {
       opacity: 1;
-      transform: translateX(-380px) translateY(-400px); 
+      transform: translateX(-230px) translateY(-550px); 
     }
   }
   
@@ -54,7 +54,7 @@
   @keyframes moveLeftDown {
     to {
       opacity: 1;
-      transform: translateY(-450px) translateX(-110px); 
+      transform:  translateX(-50px) translateY(-600px); 
     }
   }  
   
@@ -62,14 +62,14 @@
   @keyframes moveRightUp {
     to {
       opacity: 1;
-      transform: translateY(300px) translateX(110px); 
+      transform: translateX(50px) translateY(100px); 
     }
   }
   /* Management */
   @keyframes moveRightDown {
     to {
       opacity: 1;
-      transform: translateX(400px) translateY(300px); 
+      transform: translateX(250px) translateY(100px); 
     }
   }
   
