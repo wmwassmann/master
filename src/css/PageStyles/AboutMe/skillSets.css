@@ -23,8 +23,9 @@
     }
   }
   
-  .skillset h2 {
+  .skillset, h2 {
     color: #333;
+    z-index: 99;
   }
   
   .skillset ul {
@@ -73,7 +74,7 @@
     to {
       opacity: 1;
       /* ==========Horizontal ========= Vertical=========== */
-      transform: translateX(330px) translateY(-50px); 
+      transform: translateX(1260px) translateY(-170px); 
     }
   }
   
