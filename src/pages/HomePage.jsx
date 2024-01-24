@@ -19,10 +19,10 @@ const homePage =()=> {
       <div className="home-container">
         <div className="home-info left">
             <div className="home-title">
-             software
+             design
             </div>
             <div className="home-article">
-              Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems
+            Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
             </div>
         </div>
           <div>
@@ -40,9 +40,9 @@ const homePage =()=> {
             </div>
           </div>
         <div className="home-info right">
-          <div className="home-title">design</div>
+          <div className="home-title">software</div>
           <div className="home-article">
-            Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
+            Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems            
           </div>
         </div>
       </div>
