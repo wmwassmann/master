@@ -1,0 +1,56 @@
+
+
+.lan-li:nth-of-type(1) {
+    padding-right: 20px;
+}
+
+.lan-li:nth-of-type(2) {
+    padding-right: 40px;
+}
+
+.lan-li:nth-of-type(3) {
+    padding-right: 60px;
+}
+
+
+
+
+.dev-li:nth-of-type(1) {
+
+}
+
+.dev-li:nth-of-type(2) {
+}
+
+
+.dev-li:nth-of-type(3) {
+}
+
+
+
+.data-li:nth-of-type(1) {
+
+}
+
+.data-li:nth-of-type(2) {
+
+}
+
+.data-li:nth-of-type(3) {
+
+}
+
+
+
+
+.man-li:nth-of-type(1) {
+
+}
+
+.man-li:nth-of-type(2) {
+
+}
+
+.man-li:nth-of-type(3) {
+
+}

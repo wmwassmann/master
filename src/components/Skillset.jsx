@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "../css/PageStyles/AboutMe/skillSets.css";
+import "../css/PageStyles/AboutMe/liskew.css";
 
 const Skillsets = () => {
-  const languageSkills = ['C#', 'JavaScript', 'Python'];
+  const languageSkills = ['JavaScript', 'Python', 'C#'];
   const webDevelopmentSkills = ['React', 'Node.js', 'HTML/CSS'];
   const databaseSkills = ['MySQL', 'MongoDB', 'Kusto'];
   const managementSkills = ['Git', 'Visual Studio', 'Agile'];
-
+  const [isHovered, setHovered] = useState(false);
   const [animationDelay, setAnimationDelay] = useState(0.2); // Adjust the delay time (in seconds) between each skillset
 
   useEffect(() => {
@@ -20,12 +21,16 @@ const Skillsets = () => {
     <div>
       <div className="skillsets-container">
         <div className="skillset lan">
-          <h2>Languages</h2>
-          {/* <ul>
+        <h2 onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            Languages
+          </h2>
+          <ul>
             {languageSkills.map((language, index) => (
-              <li key={index}>{language}</li>
+              <li className={`lan-li ${isHovered ? 'reveal' : ''}`} key={index}>
+                {language}
+              </li>
             ))}
-          </ul> */}
+          </ul>
         </div>
 
         <div className="skillset data">
