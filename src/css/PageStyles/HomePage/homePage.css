@@ -6,14 +6,13 @@
     color: #131313;
     justify-content: space-around;
     padding: 20px;
-    overflow: hidden;
-    height: 100vh;    
+    height: 120vh;    
 }
 
 .home-info {    
     padding: 5rem;
-    padding-top: 1rem;
-    width: 530px;
+    padding-bottom: 30rem;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,12 +106,11 @@
     display: flex;
     opacity: 0;
     color: black;
-    padding-top: 30rem;
+    padding-top: 38rem;
     animation: fadeIn 0.5s ease forwards;
     font-family:'Arial', sans-serif;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.4rem;
 }
 
 
@@ -126,7 +124,7 @@
 
 .github {
     display: flex;
-    font-size: 4rem;    
+    font-size: 4.5rem;    
     padding: 70px; 
     Margin: 50px 20px 15px 20px; 
     justify-content: center;
