@@ -5,8 +5,7 @@
     display: flex;
     color: #131313;
     justify-content: space-around;
-    padding: 20px;
-    height: 120vh;    
+    height: 120vh;   
 }
 
 .home-info {    

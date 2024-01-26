@@ -47,53 +47,58 @@ const Skillsets = () => {
   return (
     <div>
       <div className="skillsets-container">
-        <div className={`skillset lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
-          <h2 onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
-            Languages
-          </h2>
-            <ul>
-              {languageSkills.map((language, index) => (
-                <li className={`skill-li ${hoveredSkillset === 'lan' && isHovered && index <= revealIndex ? 'lan-reveal' : ''}`} key={index}>
-                  {language}
-                </li>
-              ))}
-            </ul>
-        </div>
-        <div className={`skillset data ${hoveredSkillset === 'data' ? 'revealed' : ''}`}>
-          <h2 onMouseEnter={() => handleHover('data')} onMouseLeave={handleLeave}>
-            Databases
-          </h2>
-            <ul>
-              {databaseSkills.map((language, index) => (
-                <li className={`skill-li ${hoveredSkillset === 'data' && isHovered && index <= revealIndex ? 'data-reveal' : ''}`} key={index}>
-                  {language}
-                </li>
-              ))}
-            </ul>
-        </div>
-        <div className={`skillset dev ${hoveredSkillset === 'dev' ? 'revealed' : ''}`}>
-            <h2 onMouseEnter={() => handleHover('dev')} onMouseLeave={handleLeave}>
-                Development
-              </h2>
+        <div className="skills-left">
+          <div className={`skillset lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
+            <h2 onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
+              Languages
+            </h2>
               <ul>
-                {webDevelopmentSkills.map((language, index) => (
-                  <li className={`skill-li ${hoveredSkillset === 'dev' && isHovered && index <= revealIndex ? 'dev-reveal' : ''}`} key={index}>
+                {languageSkills.map((language, index) => (
+                  <li className={`skill-li ${hoveredSkillset === 'lan' && isHovered && index <= revealIndex ? 'lan-reveal' : ''}`} key={index}>
                     {language}
                   </li>
                 ))}
               </ul>
-        </div>
-        <div className={`skillset man ${hoveredSkillset === 'man' ? 'revealed' : ''}`}>
-            <h2 onMouseEnter={() => handleHover('man')} onMouseLeave={handleLeave}>
-                Management
-              </h2>
+          </div>
+          <div className={`skillset data ${hoveredSkillset === 'data' ? 'revealed' : ''}`}>
+            <h2 onMouseEnter={() => handleHover('data')} onMouseLeave={handleLeave}>
+              Databases
+            </h2>
               <ul>
-                {managementSkills.map((language, index) => (
-                  <li className={`skill-li ${hoveredSkillset === 'man' && isHovered && index <= revealIndex ? 'man-reveal' : ''}`} key={index}>
+                {databaseSkills.map((language, index) => (
+                  <li className={`skill-li ${hoveredSkillset === 'data' && isHovered && index <= revealIndex ? 'data-reveal' : ''}`} key={index}>
                     {language}
                   </li>
                 ))}
               </ul>
+          </div>
+        </div>
+
+        <div className="skills-right">
+          <div className={`skillset dev ${hoveredSkillset === 'dev' ? 'revealed' : ''}`}>
+              <h2 onMouseEnter={() => handleHover('dev')} onMouseLeave={handleLeave}>
+                  Development
+                </h2>
+                <ul>
+                  {webDevelopmentSkills.map((language, index) => (
+                    <li className={`skill-li ${hoveredSkillset === 'dev' && isHovered && index <= revealIndex ? 'dev-reveal' : ''}`} key={index}>
+                      {language}
+                    </li>
+                  ))}
+                </ul>
+          </div>
+          <div className={`skillset man ${hoveredSkillset === 'man' ? 'revealed' : ''}`}>
+              <h2 onMouseEnter={() => handleHover('man')} onMouseLeave={handleLeave}>
+                  Management
+                </h2>
+                <ul>
+                  {managementSkills.map((language, index) => (
+                    <li className={`skill-li ${hoveredSkillset === 'man' && isHovered && index <= revealIndex ? 'man-reveal' : ''}`} key={index}>
+                      {language}
+                    </li>
+                  ))}
+                </ul>
+          </div>
         </div>
       </div>
     </div>
