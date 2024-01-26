@@ -14,7 +14,8 @@
   height: 250px;
   width: 300px; 
   opacity: 0;
-  animation: fadeIn 0.5s ease forwards;     
+  animation: fadeIn 0.5s ease forwards;    
+   
 }
 
   @keyframes fadeIn {
@@ -22,6 +23,17 @@
       opacity: 1;
       transform: translate(0, 0);
     }
+  }
+
+  .skill-head {
+    padding: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 3%);
+    transform: skew(-20deg);
+  }
+
+  .head-name {
+    transform: skew(20deg);
   }
   
   .skillset, h2 {
@@ -39,16 +51,31 @@
     margin: 8px 0;
     font-size: 16px;
     font-weight: bold;
+    
   }
 
 
   .skills-left, .skills-right {
     display: flex;
     flex-direction: row;
+    transition: all 0.5s ease;    
   }
 
   @media (max-width: 2500px) {
     .skills-left, .skills-right {
         flex-direction: column;
+        transform: skew(-20deg);
+        padding-right: 110px;
     }
+
+    .skill-head {
+      transform: skew(0deg);
+    }
+
+  }
+
+  @media (max-width: 2500px) {
+  h2, .skill-li {
+      transform: skew(20deg);
+  }
 }

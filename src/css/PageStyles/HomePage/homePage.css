@@ -49,13 +49,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
-.link:hover {
+.link:hover, .skill-head:hover {
     background-color: #777; 
     transition: background-color 0.3s; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
-    color: hsl(0, 0%, 100%);
-    transform: skew(-20deg);
-    
+    color: hsl(0, 0%, 100%);   
 }
 
 .home-title {
@@ -124,12 +122,17 @@
 .github {
     display: flex;
     font-size: 4.5rem;    
-    padding: 70px; 
+    padding: 110px; 
     Margin: 50px 20px 15px 20px; 
     justify-content: center;
-    align-self: center;     
-
+    align-self: center;    
 }
 
 
 
+
+@media (max-width: 2500px) {
+    .github  {
+        padding-left: 280px;
+    }
+}
