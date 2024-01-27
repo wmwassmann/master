@@ -29,7 +29,7 @@
     padding: 15px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
-    transform: skew(-20deg);
+    /* transform: skew(-20deg); */
   }
 
   .head-name {
@@ -43,7 +43,7 @@
   
   .skillset ul {
     list-style: none;
-    padding: 0;
+    padding: 0;    
   }
   
   .skillset li {
@@ -51,14 +51,18 @@
     margin: 8px 0;
     font-size: 16px;
     font-weight: bold;
-    
+    padding: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 3%);    
   }
+
 
 
   .skills-left, .skills-right {
     display: flex;
     flex-direction: row;
-    transition: all 0.5s ease;    
+    transition: all 0.5s ease; 
+    transform: skew(-20deg);  
   }
 
   @media (max-width: 2500px) {
@@ -75,7 +79,7 @@
   }
 
   @media (max-width: 2500px) {
-  h2, .skill-li {
-      transform: skew(20deg);
+  h2, .skillset ul, .skill-li {
+      transform: skew(0deg);
   }
 }
