@@ -2,21 +2,27 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
+// import cors from 'cors';
 
 const app = express();
+const PORT = process.env.PORT || 5173;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// app.use(cors({
+//   origin: 'http://localhost:5173'
+// }));
+
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  service: 'Outlook',
   auth: {
     user: 'wmwassmann@hotmail.com', 
     pass: 'Bizzywisket108_' 
   }
 });
 
-app.post('/send-email', (req, res) => {
+app.post('/master/contact', (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const mailOptions = {
@@ -28,17 +34,16 @@ app.post('/send-email', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error('Error sending email:', error);
-      res.status(500).send('Failed to send email');
+      console.error('SERVER Error sending email:', error);
+      res.status(500).send('SERVER Failed to send email');
+      
     } else {
-      console.log('Email sent:', info.response);
-      res.status(200).send('Email sent successfully');
+      console.log('SERVER Email sent:', info.response);
+      res.status(200).send('SERVER Email sent successfully');
     }
   });
 });
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log('Server startup log triggered!');
 });

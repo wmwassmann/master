@@ -18,13 +18,13 @@ const EmailForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/send-email', formData);
+      await axios.post('/master/contact', formData);
       // await axios.post('/send-email', formData);
-      alert('Email sent successfully!');
+      alert('CLIENT Email sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email. Please try again later.');
+      console.error('CLaIENT Error sending email:', error);
+      alert('CLIENT Failed to send email. Please try again later.');
     }
   };
 
