@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import "../css/PageStyles/AboutMe/skillSets.css";
-import "../css/PageStyles/AboutMe/liskew.css";
 
 const Skillsets = () => {
   const languageSkills = ['JavaScript', 'Python', 'C#'];
@@ -47,7 +46,7 @@ const Skillsets = () => {
   return (
     <div>
       <div className="skillsets-container">
-        <div className="skills-left">
+        {/* <div className="skills-left"> */}
           <div className={`skillset lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
               <div className="head-name">
@@ -76,9 +75,9 @@ const Skillsets = () => {
                 ))}
               </ul>
           </div>
-        </div>
+        {/* </div> */}
 
-        <div className="skills-right">
+        {/* <div className="skills-right"> */}
           <div className={`skillset dev ${hoveredSkillset === 'dev' ? 'revealed' : ''}`}>
               <h2 className="skill-head" onMouseEnter={() => handleHover('dev')} onMouseLeave={handleLeave}>
                 <div className="head-name">
@@ -107,7 +106,7 @@ const Skillsets = () => {
                   ))}
                 </ul>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -5,12 +5,11 @@
     display: flex;
     color: #131313;
     justify-content: space-around;
-    height: 120vh;   
+    height: 100vh;   
 }
 
 .home-info {    
     padding: 5rem;
-    padding-bottom: 30rem;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -104,7 +103,8 @@
     display: flex;
     opacity: 0;
     color: black;
-    padding-top: 38rem;
+    height: 100vh;
+    padding-bottom: 15%;
     animation: fadeIn 0.5s ease forwards;
     font-family:'Arial', sans-serif;
     flex-direction: column;
@@ -131,9 +131,3 @@
 
 
 
-
-@media (max-width: 2500px) {
-    .github  {
-        padding-left: 280px;
-    }
-}

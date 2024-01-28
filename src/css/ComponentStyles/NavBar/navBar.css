@@ -9,10 +9,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #f7f7f7;
+    background: #d9d9d9;
     color: hsl(0, 0%, 100%);
     border-bottom: 1.5px solid #ccc;
-    padding: 10px;
     z-index: 100;
     display: flex;
     justify-content: space-between;

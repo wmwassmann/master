@@ -1,21 +1,16 @@
 .skillsets-container {
   display: flex;
   padding: 2px;
-  justify-content: center;
+  flex-direction: column;
 }
 
 
 .skillset {
   text-align: center;
-  /* background-color: #fff; */
-  padding: 20px;
-  /* margin-left: 10rem; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  height: 250px;
-  width: 300px; 
+  /* padding: 20px; */
+  /* height: 170px; */
   opacity: 0;
-  animation: fadeIn 0.5s ease forwards;    
-   
+  animation: fadeIn 0.5s ease forwards;     
 }
 
   @keyframes fadeIn {
@@ -26,13 +21,16 @@
   }
 
   .skill-head {
-    padding: 15px; 
+    padding: 8px; 
+    margin:0;
+    width: 22rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
-    /* transform: skew(-20deg); */
+    transform: skew(-20deg);
   }
 
   .head-name {
+    font-size: 1.8rem;
     transform: skew(20deg);
   }
   
@@ -40,23 +38,35 @@
     color: #333;
     z-index: 99;
   }
+
   
   .skillset ul {
-    list-style: none;
-    padding: 0;    
+    display: flex;
+    flex-direction: column;
   }
   
-  .skillset li {
+  .skillset li {    
     color: #000;
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: bold;
+    width: 22rem;
     padding: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    color: hsl(0, 0%, 3%);    
+    color: hsl(0, 0%, 3%);  
+    transform: skew(-20deg);  
   }
 
 
+  .skill-li {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+  } 
+
+  .lan-reveal, .dev-reveal, .data-reveal, .man-reveal {
+      visibility: visible;
+  }
 
   .skills-left, .skills-right {
     display: flex;
@@ -65,21 +75,22 @@
     transform: skew(-20deg);  
   }
 
-  @media (max-width: 2500px) {
-    .skills-left, .skills-right {
-        flex-direction: column;
-        transform: skew(-20deg);
-        padding-right: 110px;
-    }
 
-    .skill-head {
-      transform: skew(0deg);
-    }
 
+  @media screen and (min-width: 800px) {
+    .skillset li {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1800px) {
+    .skillset li {
+      font-size: 1.1rem;
+    }
   }
 
-  @media (max-width: 2500px) {
-  h2, .skillset ul, .skill-li {
-      transform: skew(0deg);
+  @media screen and (min-width: 2468px) {
+    .skillset li {
+      font-size: 1.2rem;
+    }
   }
-}

@@ -5,11 +5,15 @@ body {
     max-width: 2300px;
   }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 button {
   background-color: initial;
   color: initial;
   border: initial;
-  /* Add other styles you want to reset */
 }
 
 a {
@@ -17,5 +21,4 @@ a {
   color: initial;
   border: initial;
   text-decoration: none;
-
 }

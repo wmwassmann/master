@@ -35,9 +35,9 @@ const homePage =()=> {
                 </Link>
               </div>
             </div>
-            <div className="skill-blocks">            
+            {/* <div className="skill-blocks">            
               <Skillsets/>
-            </div>
+            </div> */}
           </div>
         <div className="home-info right">
           <div className="home-title">software</div>
