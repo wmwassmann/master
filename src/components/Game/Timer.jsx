@@ -39,7 +39,7 @@ const Timer = (props) => {
   
     return (
       <div>
-        <p className='timer-counter'>{timer === 0 ? 'GAME OVER' : `Timer: ${timer}s`}</p>
+        <p className='timer-counter'>{timer === 0 ? 'GAME OVER (In progress)' : `Timer: ${timer}s`}</p>
       </div>
     );
   };

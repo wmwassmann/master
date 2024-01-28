@@ -111,6 +111,7 @@ const UserInput = (props) => {
                 />
             </div>
             <p className="game-status">Game Status: Level {level} {result}</p>               
+
             <LevelHandler
                 updateLevel={updateLevel}
                 nextLevel={nextLevel}
