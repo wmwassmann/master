@@ -7,7 +7,7 @@ class Download extends Component {
   render() {
 
     return (
-        <div>
+        <div className='resume-button'>
           <a href={Pdf} target="_blank">Resume.pdf</a>
         </div>
     );

@@ -1,14 +1,12 @@
 .skillsets-container {
   display: flex;
   padding: 2px;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 
 .skillset {
   text-align: center;
-  /* padding: 20px; */
-  /* height: 170px; */
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;     
 }
@@ -27,6 +25,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
     transform: skew(-20deg);
+    background-color: rgb(255, 255, 255);
   }
 
   .head-name {
@@ -53,7 +52,8 @@
     width: 22rem;
     padding: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    color: hsl(0, 0%, 3%);  
+    color: hsl(0, 0%, 3%); 
+    background-color: rgb(255, 255, 255); 
     transform: skew(-20deg);  
   }
 

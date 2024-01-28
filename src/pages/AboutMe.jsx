@@ -13,6 +13,9 @@ const AboutMe = () => {
         <h1>
           William Wassmann         
         </h1>
+          <button className='pdf-button'>
+            <Download />
+          </button>
         <div className='aboutme-body'>
           <div className="text-container">
             <p className='text-body'>
@@ -29,9 +32,6 @@ const AboutMe = () => {
             <Skillsets/>
           </div>     
         </div>
-        <button className='pdf-button'>
-          <Download />
-        </button>
     </div>
   );
 };
