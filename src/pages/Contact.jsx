@@ -1,11 +1,11 @@
 import React from "react";
 import "../css/PageStyles/ContactMe/contactInfo.css";
-import ContactInfo from "../components/ContactInfo"
+import EmailForm from "../components/Contact/EmailForm.jsx"
 
 export default function Contact() {
     return (
         <div className="info-container">
-            <ContactInfo/>
+            <EmailForm/>
         </div>
     )
 }

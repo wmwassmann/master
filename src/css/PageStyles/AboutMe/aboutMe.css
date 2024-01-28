@@ -72,14 +72,14 @@
   }
 
   .text-container {
-    width: 50%;    
+    width: 65%;    
   }
 
   .about-me-skills-container {
     display: flex;
     justify-content: center;
     padding: 2.3rem;
-    width: 50%; 
+    width: 35%; 
   }
 
   .text-body {

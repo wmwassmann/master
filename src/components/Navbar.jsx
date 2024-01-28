@@ -9,10 +9,10 @@ export default function Navbar() {
         </div>
         <ul>
             <li className="title-name">
-               <Link to="/resume">// Resume</Link>
+               <Link to="/resume">// About Me</Link>
             </li>
             <li  className="title-name">
-               <Link to="/contact">// Contact</Link>
+               <Link to="/contact">// Contact Me</Link>
             </li>
             <li  className="title-name">
                <Link to="/game">// Fun(?)</Link>
