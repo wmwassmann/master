@@ -6,9 +6,17 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "dev": "concurrently \"vite\" \"node server.js\"",
-    "build": "vite",
+    "deploy": "gh-pages -d build:client && -d build:server",
+    "dev:client": "vite",
+    "dev:server": "node server.js",
+    "dev": "start npm run dev:server && start npm run dev:client",
+    "build:client": "vite build",
+    "build:server": "vite build && node server.js",
+
+
+    "comment-dev": "concurrently \"vite\" \"node server.js\"",
+    "comment-build": "vite",
+
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "email": "email dev --dir src/components/Contact"
