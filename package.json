@@ -5,13 +5,14 @@
   "version": "2.4.2",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build:client && npm run build:server",
-    "deploy": "gh-pages -d build:client && -d build:server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev:client": "vite",
     "dev:server": "node server.js",
     "dev": "start npm run dev:server && start npm run dev:client",
-    "build:client": "vite",
-    "build:server": "node server.js",
+    "build:client": "vite build",
+    "build:server": "vite build && node server.js",
+    "build": "npm run build:client && npm run build:server"
 
 
     "comment-dev": "concurrently \"vite\" \"node server.js\"",
