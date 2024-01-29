@@ -20,7 +20,7 @@ const EmailForm = () => {
     try {
       await axios.post('/master/contact', formData);
       // await axios.post('/send-email', formData);
-      alert('CLIENT Email sent successfully!');
+      alert('CLeIENT Email sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('CLaIENT Error sending email:', error);
