@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "concurrently \"vite\" \"node server.js\"",
-    "build": "vite && node server.js",
+    "build": "vite",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "email": "email dev --dir src/components/Contact"
