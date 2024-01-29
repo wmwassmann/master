@@ -9,19 +9,13 @@
     "deploy": "gh-pages -d build",
     "dev:client": "vite",
     "dev:server": "node server.js",
-    "dev": "start npm run dev:server && start npm run dev:client",
+    "dev": "npm-run-all --parallel dev:client dev:server",
     "build:client": "vite build",
-    "build:server": "node server.js",
-    "build": "npm run build:client && npm run build:server",
-
-
-    "comment-dev": "concurrently \"vite\" \"node server.js\"",
-    "comment-build": "vite",
-
+    "build": "npm run build:client",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "email": "email dev --dir src/components/Contact"
-  },
+},
   "dependencies": {
     "@pdftron/webviewer": "^10.6.0",
     "@react-email/components": "^0.0.12",
