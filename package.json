@@ -10,8 +10,8 @@
     "dev:client": "vite",
     "dev:server": "node server.js",
     "dev": "start npm run dev:server && start npm run dev:client",
-    "build:client": "vite build",
-    "build:server": "vite build && node server.js",
+    "build:client": "vite",
+    "build:server": "node server.js",
 
 
     "comment-dev": "concurrently \"vite\" \"node server.js\"",
