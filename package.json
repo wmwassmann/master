@@ -5,7 +5,7 @@
   "version": "2.4.2",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:client && npm run build:server",
     "deploy": "gh-pages -d build:client && -d build:server",
     "dev:client": "vite",
     "dev:server": "node server.js",
