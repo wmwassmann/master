@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/PageStyles/ContactMe/contactInfo.css";
-import EmailForm from "../components/Contact/EmailForm.jsx"
+import EmailForm from "../components/Emails/EmailForm.jsx"
 
 export default function Contact() {
     return (
