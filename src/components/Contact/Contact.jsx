@@ -1,6 +1,6 @@
 import React from "react";
-import "../../css/ComponentStyles/Contact/Contact.css"
-import ContactInfo from "./ContactInfo.jsx";
+import "../../css/ComponentStyles/Contact/contact.css"
+import ContactInfo from "../ContactInfo.jsx";
 import EmailForm from "../Emails/EmailForm.jsx"
 
 const ContactMain = () => {
