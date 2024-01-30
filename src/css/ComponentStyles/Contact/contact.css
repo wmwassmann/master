@@ -1,0 +1,15 @@
+.contact-container {
+    display: flex;
+    color: black;
+}
+
+
+.email-form {
+    width: 500px;
+}
+
+
+.contact-info-container {
+    width: 20vw;
+}
+

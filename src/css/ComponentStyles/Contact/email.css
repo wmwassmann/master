@@ -1,0 +1,61 @@
+.email-container, .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-container {
+    
+}
+
+.email-head {
+    display: flex;
+    flex-direction: row;
+}
+
+.email-body {
+    
+}
+
+
+.input-container {
+    /* text-align: start; */
+}
+
+.input-name {
+    height: 30px;
+    width:250px;
+}
+
+.input-subject, .input-content {
+    width:500px;
+}
+
+.input-subject {
+    height: 30px;
+}
+
+.message-container {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    resize: none; /* Prevent resizing */
+}
+
+
+.input-content {
+    width: calc(100% - 2px); /* Adjust for border */
+    height: calc(100% - 2px); /* Adjust for border */
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    overflow: hidden; /* Hide overflow */
+    resize: none; /* Prevent resizing */
+    overflow-wrap: break-word;
+}
+

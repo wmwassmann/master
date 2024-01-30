@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { sendCustomEmail } from "./EmailHandler";
+import "../../css/ComponentStyles/Contact/email.css"
 
 
 const EmailForm = () => {
 
     const [details, setDetails] = useState ({
+        your_name: '',
+        your_email: '',
         subject: '',
         message: '',
-        to_email: ''
     })
+    
 
     const handleDetailsChange = (event) => {
         const { name, value } = event.target;
@@ -26,36 +29,51 @@ const EmailForm = () => {
     }
     
     return (
-        <div>
-            <div>
-                <span>To:</span>
-                <input
-                    name="to_email"
-                    value={details.to_email}
-                    onChange={handleDetailsChange}
-                    type="email"
-                    placeholder="Required"
-                    />
+        <div className="email-container">
+            <div className="email-head">
+                <div className="input-container">
+                    <input
+                        className="input-name"
+                        name="your_name"
+                        value={details.your_name}
+                        onChange={handleDetailsChange}
+                        type="text"
+                        placeholder="Name *"
+                        />
+                </div>
+                <div className="input-container">
+                    <input
+                        className="input-name"
+                        name="your_email"
+                        value={details.your_email}
+                        onChange={handleDetailsChange}
+                        type="email"
+                        placeholder="Email *"
+                        />
+                </div>
             </div>
-            <div>
-                <span>Subject:</span>
-                <input
-                    name="subject"
-                    value={details.subject}
-                    onChange={handleDetailsChange}
-                    type="text"
-                    placeholder="Required"
-                    />
-            </div>
-            <div>
-                <span>Message:</span>
-                <input
-                    name="message"
-                    value={details.message}
-                    onChange={handleDetailsChange}
-                    type="text"
-                    placeholder="Required"
-                    />
+            <div className="email-body">
+                <div className="subject-container">
+                    <input
+                        className="input-subject"
+                        name="subject"
+                        value={details.subject}
+                        onChange={handleDetailsChange}
+                        type="text"
+                        placeholder="Subject (optional)"
+                        />
+                </div>
+                <div className="message-container">
+                    <textarea
+                        className="input-content"
+                        name="message"
+                        value={details.message}
+                        onChange={handleDetailsChange}
+                        type="text"
+                        // maxLength={500}
+                        placeholder="Message *"
+                        />
+                </div>
             </div>
             <button 
                 disabled={!details.to_email || !details.message || !details.subject}
