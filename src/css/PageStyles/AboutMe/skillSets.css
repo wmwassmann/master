@@ -2,13 +2,14 @@
   display: flex;
   padding: 2px;
   flex-direction: column;  
+  width: 100%;  
 }
 
 
 .skillset {
   text-align: center;
   opacity: 0;
-  animation: fadeIn 0.5s ease forwards;     
+  animation: fadeIn 0.5s ease forwards;  
 }
 
   @keyframes fadeIn {
@@ -20,8 +21,9 @@
 
   .skill-head {
     padding: 8px; 
+    width: inherit;
+    font-size: 1.8rem;
     margin:0;
-    width: 22rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
     transform: skew(-20deg);
@@ -29,7 +31,6 @@
   }
 
   .head-name {
-    font-size: 1.8rem;
     transform: skew(20deg);
   }
   
@@ -49,7 +50,6 @@
     margin: 8px 0;
     font-size: 1.4rem;
     font-weight: bold;
-    width: 22rem;
     padding: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%); 
@@ -91,6 +91,18 @@
 
   @media screen and (min-width: 2468px) {
     .skillset li {
+      font-size: 1.2rem;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .skillset {
+      height: 250px;
+    }
+
+    .head-name {
+      width: 20vw;
       font-size: 1.2rem;
     }
   }

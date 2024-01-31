@@ -6,6 +6,7 @@
 
 .navbar-container {
     position: fixed;
+    font-family:'Tahoma';
     top: 0;
     left: 0;
     width: 100%;
@@ -60,4 +61,8 @@
 .title-name {
     font-size: 1.1rem;
     color: #333;
+}
+
+.nav-link:hover {
+    transform: skew(20deg);
 }

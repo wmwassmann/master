@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { sendCustomEmail } from "./EmailHandler";
 import "../../css/ComponentStyles/Contact/email.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const EmailForm = () => {
+    const env = <FontAwesomeIcon icon={faEnvelope} />
+    // const pdf = <FontAwesomeIcon icon={faFilePdf} />
+    
     const [details, setDetails] = useState({
         your_name: "",
         your_email: "",
@@ -31,7 +36,7 @@ const EmailForm = () => {
 
     return (
         <div className="email-container">
-            <h1 className="contact-head">Contact Me</h1>
+            <h1 className="contact-head">{env} Contact Me</h1>
             <div className="email-head">
                 <div className="input-container">
                     <input

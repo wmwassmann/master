@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/PageStyles/AboutMe/skillSets.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { jsicon } from '@fortawesome/free-solid-svg-icons'
 
 const Skillsets = () => {
   const languageSkills = ['JavaScript', 'Python', 'C#'];
@@ -10,6 +12,8 @@ const Skillsets = () => {
   const [animationDelay, setAnimationDelay] = useState(0.2);
   const [revealIndex, setRevealIndex] = useState(-1);
   const [hoveredSkillset, setHoveredSkillset] = useState(null);
+
+  // const jsicon = <FontAwesomeIcon icon={faJs} />
 
   useEffect(() => {
     const skillsets = document.querySelectorAll('.skillset' || '.li');
@@ -50,7 +54,8 @@ const Skillsets = () => {
           <div className={`skillset lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
               <div className="head-name">
-                Languages
+                
+                Languages 
               </div>
             </h2>
               <ul>

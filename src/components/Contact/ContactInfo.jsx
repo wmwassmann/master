@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/ComponentStyles/Contact/contact.css"
 
+
 const ContactInfo = () => {
     return (
         <div className="contact-info-container">    
