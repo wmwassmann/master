@@ -30,6 +30,9 @@ const EmailForm = () => {
     
     return (
         <div className="email-container">
+            <h1 className="contact-head">
+                Contact Me
+            </h1>
             <div className="email-head">
                 <div className="input-container">
                     <input
@@ -76,10 +79,11 @@ const EmailForm = () => {
                 </div>
             </div>
             <button 
-                disabled={!details.to_email || !details.message || !details.subject}
+                className="send-email"
+                disabled={!details.your_name || !details.your_email || !details.message || !details.subject}
                 onClick={handleSendEmail}
                 >
-            <span>Send Email</span>
+                <span className="email-btn-text">Send Email</span>
             </button>
         </div>
     )

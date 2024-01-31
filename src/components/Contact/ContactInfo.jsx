@@ -4,10 +4,12 @@ import "../../css/ComponentStyles/Contact/contact.css"
 const ContactInfo = () => {
     return (
         <div className="contact-info-container">    
-            AHHH ITS SHITTY TEXT THAT I NEED TO TEST BOUNDARIES ON THIS 
-            DIV. ASKJDFGNKAJSDFNBALSKDFNJAKSDFNLKASJDFKLASFD 
-            SO FAR IT SEEMS FINE BUT I GOTTA KEEP GOING JUST IN CASE.
-            DAMNIT I NEED TO FIX THAT OVERLAP
+            Please email me at  
+            <span className="email-address">
+                &nbsp;wmwassmann404@gmail.com
+            </span>. 
+            I welcome inquiries regarding software roles. 
+            You can reach out to me directly via email, or alternatively, use the built-in form on my website to send me a message.
         </div>
     )
 }

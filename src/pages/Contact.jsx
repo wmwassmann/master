@@ -4,7 +4,7 @@ import ContactMain from "../components/Contact/Contact.jsx"
 
 export default function Contact() {
     return (
-        <div className="info-container">
+        <div className="info-container">       
             <ContactMain/>
         </div>
     )
