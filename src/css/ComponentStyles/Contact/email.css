@@ -16,11 +16,6 @@
     flex-direction: row;
 }
 
-.email-body {
-    
-}
-
-
 .input-container {    
     padding-bottom: 3%;
 }
@@ -46,10 +41,7 @@
 .message-container {
     width: 500px;
     height: 200px;
-    border: 1px solid #ccc;
-    overflow: auto;
-    resize: none;
-    
+    border: 1px solid #ccc;    
 }
 
 .input-content {
@@ -71,6 +63,7 @@
     margin: 8px 0;
     font-size: 1.4rem;
     font-weight: bold;
+    margin-top: 5%;
     width: 22rem;
     padding: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -99,8 +92,9 @@
 
 
 .character-limit {
+    display: flex;
     font-size: 0.8rem;
-    color: gray;
+    color: rgb(17, 17, 17);
 }
 
 .character-limit.reached {

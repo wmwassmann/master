@@ -76,7 +76,7 @@ const EmailForm = () => {
                         placeholder="Message *"
                     />
                     <span className={characterLimitReached ? "character-limit reached" : "character-limit"}>
-                        {remainingCharacters} characters {characterLimitReached && "left (50 characters left)"}
+                        {remainingCharacters} characters {characterLimitReached}
                     </span>
                 </div>
             </div>
