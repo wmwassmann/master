@@ -96,3 +96,13 @@
 .send-email:active {
     background-color: rgba(0, 0, 0, 0.1); 
 }
+
+
+.character-limit {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.character-limit.reached {
+    color: red;
+}
