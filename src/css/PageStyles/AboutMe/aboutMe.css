@@ -2,9 +2,10 @@
 .readme-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 20px auto;
-  padding-top: 20px;
+  padding-top: 20px;  
   width: 90%;
   border: 1px solid #ccc;
   background-color: #f3f3f3;
@@ -14,10 +15,13 @@
 .aboutme-body {
   display: flex;
   flex-direction: row;
+
 }
 
 .about-me {  
   margin-top: 8.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .sub-header {
