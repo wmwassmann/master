@@ -6,7 +6,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const EmailForm = () => {
     const env = <FontAwesomeIcon icon={faEnvelope} />
-    // const pdf = <FontAwesomeIcon icon={faFilePdf} />
     
     const [details, setDetails] = useState({
         your_name: "",

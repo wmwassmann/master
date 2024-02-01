@@ -1,7 +1,6 @@
 
 /* Additional styling for the .home-container */
 .home-container {
-    position: relative;
     display: flex;
     color: #131313;
     justify-content: space-around;
@@ -10,13 +9,13 @@
 
 .home-info {    
     padding: 5rem;
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 6rem;
+    width: 500px;
     font-family: 'Arial', sans-serif;
-    transition: transform 0.5s ease-in-out;
+    /* transition: transform 0.5s ease-in-out; */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
     color: hsl(0, 0%, 100%);
     background-color: #777;
@@ -58,9 +57,7 @@
 }
 
 .home-title {
-    text-align: center;
-    display: flex;
-    align-self: center;    
+    width: 500px;
     transform: skew(20deg);
 }
 
@@ -73,18 +70,31 @@
 }
 
 .left {
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-name: slideInLeft;
+    animation-timing-function: ease-out;
 }
 
 .right {
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-name: slideInRight;
+    animation-timing-function: ease forwards;
 }
+
+.out-left {
+    animation-duration: .3s;
+    animation-name: slideOutLeft;
+}
+
+.out-right {
+    animation-duration: .3s;
+    animation-name: slideOutRight;
+}
+
 
 @keyframes slideInLeft {
     from {
-        margin-right: 50%;
+        margin-right: 50%; 
     }
     to {
         margin-right: 0%;
@@ -100,6 +110,25 @@
     }
 }
 
+
+@keyframes slideOutLeft { 
+    from {
+        margin-right: 0%;
+    }
+    to {
+        margin-right: 50%;
+    }
+}
+
+@keyframes slideOutRight { 
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 50%;
+    }
+}
+
 .center-title {
     display: flex;
     opacity: 0;
@@ -112,7 +141,18 @@
     justify-content: center;
 }
 
+.gitOut {
+    animation: fadeOut 0.01s;
+}
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 @keyframes fadeIn {
     to {

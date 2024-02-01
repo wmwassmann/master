@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/PageStyles/AboutMe/skillSets.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { jsicon } from '@fortawesome/free-solid-svg-icons'
+import { faListAlt } from '@fortawesome/free-regular-svg-icons'
 
 const Skillsets = () => {
   const languageSkills = ['JavaScript', 'Python', 'C#'];
@@ -12,8 +12,7 @@ const Skillsets = () => {
   const [animationDelay, setAnimationDelay] = useState(0.2);
   const [revealIndex, setRevealIndex] = useState(-1);
   const [hoveredSkillset, setHoveredSkillset] = useState(null);
-
-  // const jsicon = <FontAwesomeIcon icon={faJs} />
+  const arw = <FontAwesomeIcon icon={faListAlt} />
 
   useEffect(() => {
     const skillsets = document.querySelectorAll('.skillset' || '.li');
@@ -53,9 +52,8 @@ const Skillsets = () => {
         {/* <div className="skills-left"> */}
           <div className={`skillset lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
-              <div className="head-name">
-                
-                Languages 
+              <div className="head-name">                
+                Languages {arw}
               </div>
             </h2>
               <ul>
@@ -69,7 +67,7 @@ const Skillsets = () => {
           <div className={`skillset data ${hoveredSkillset === 'data' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('data')} onMouseLeave={handleLeave}>
               <div className="head-name">
-              Databases
+              Databases {arw}
               </div>
             </h2>
               <ul>
@@ -86,7 +84,7 @@ const Skillsets = () => {
           <div className={`skillset dev ${hoveredSkillset === 'dev' ? 'revealed' : ''}`}>
               <h2 className="skill-head" onMouseEnter={() => handleHover('dev')} onMouseLeave={handleLeave}>
                 <div className="head-name">
-                  Development
+                  Development {arw}
                 </div>
                 </h2>
                 <ul>
@@ -100,7 +98,7 @@ const Skillsets = () => {
           <div className={`skillset man ${hoveredSkillset === 'man' ? 'revealed' : ''}`}>
               <h2 className="skill-head" onMouseEnter={() => handleHover('man')} onMouseLeave={handleLeave}>
                 <div className="head-name">
-                  Management
+                  Management {arw}
                 </div>
               </h2>
                 <ul>
