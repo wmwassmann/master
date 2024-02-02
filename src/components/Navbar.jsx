@@ -38,7 +38,7 @@ export default function Navbar() {
     return (
         <nav className="navbar-container">
             <div className="site-title">
-                <Link className="nav-link" to="/home" onClick={(event) => handleTransition(event, "home")}>W</Link>
+                <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>W</Link>
             </div>
             <ul>
                 <li className="title-name">
