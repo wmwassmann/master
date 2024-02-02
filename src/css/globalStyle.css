@@ -22,3 +22,21 @@ a {
   border: initial;
   text-decoration: none;
 }
+
+
+.flank {    
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 6rem;
+  width: 33vw;
+  max-width: 500px;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  /* transition: transform 0.5s ease-in-out; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+  color: hsl(0, 0%, 100%);
+  background-color: #777;
+  transform: skew(-20deg);
+}

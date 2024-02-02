@@ -29,7 +29,7 @@ const Skillsets = () => {
       } else {
         clearInterval(revealInterval);
       }
-    }, 200); // Adjust the delay (in milliseconds) as needed
+    }, 50); // Adjust the delay (in milliseconds) as needed
 
     return () => clearInterval(revealInterval);
   }, [revealIndex]);
@@ -38,7 +38,6 @@ const Skillsets = () => {
     setHovered(true);
     setRevealIndex(0);
     setHoveredSkillset(skillset);
-    console.log(skillset)
   };
 
   const handleLeave = () => {

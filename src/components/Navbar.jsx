@@ -4,42 +4,53 @@ import "../css/ComponentStyles/NavBar/navBar.css"
 
 export default function Navbar() {
 
-    const handleTransition = (event) => {
-        event.preventDefault(); 
+    const handleTransition = (event, currentPage) => {
+        event.preventDefault();    
+    
+        const gitOut = document.querySelector('.center-title');
+        const profileOut = document.querySelector(".profile-container")
+        const contactOut = document.querySelector(".contact-body")
+    
+        const leftSide = document.querySelector('.left');            
+        const rightSide = document.querySelector('.right');
 
-        const homePage = document.querySelector(".github")
-        if (homePage) {
-            const leftSide = document.querySelector('.left');
-            const rightSide = document.querySelector('.right');
-            const gitOut = document.querySelector('.center-title');
-            
-            leftSide.classList.add('out-left');
+        if (gitOut && currentPage !== "home") {
             rightSide.classList.add('out-right');
+            leftSide.classList.add('out-left');
             gitOut.classList.add('gitOut');
         }
-        
-        
+
+        if (profileOut && currentPage !== "resume") {
+            rightSide.classList.add('out-right');
+        }     
+
+        if (contactOut  && currentPage !== "contact") {
+            // rightSide.classList.add('out-right');
+        }     
         
         setTimeout(() => {
             const destination = event.target.getAttribute('href');
             window.location.href = destination;
+
         }, 200); 
     };
 
-    return <nav className="navbar-container">
-        <div className="site-title">
-            <Link className="nav-link" to="/">W</Link>
-        </div>
-        <ul>
-            <li className="title-name">
-               <Link className="nav-link" to="/resume" onClick={handleTransition}>// About Me</Link>
-            </li>
-            <li  className="title-name">
-               <Link className="nav-link" to="/contact" onClick={handleTransition}>// Contact Me</Link>
-            </li>
-            <li  className="title-name">
-               <Link className="nav-link" to="/game" onClick={handleTransition}>// Fun(?)</Link>
-            </li>
-        </ul>
-    </nav>
+    return (
+        <nav className="navbar-container">
+            <div className="site-title">
+                <Link className="nav-link" to="/home" onClick={(event) => handleTransition(event, "home")}>W</Link>
+            </div>
+            <ul>
+                <li className="title-name">
+                    <Link className="nav-link" to="/resume" onClick={(event) => handleTransition(event, "resume")}>// About Me</Link>
+                </li>
+                <li className="title-name">
+                    <Link className="nav-link" to="/contact" onClick={(event) => handleTransition(event, "contact")}>// Contact Me</Link>
+                </li>
+                <li className="title-name">
+                    <Link className="nav-link" to="/game" onClick={(event) => handleTransition(event, "game")}>// Fun(?)</Link>
+                </li>
+            </ul>
+        </nav>
+    );
 }

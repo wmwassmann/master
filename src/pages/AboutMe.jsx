@@ -7,15 +7,6 @@ import Skillsets from '../components/Skillset';
 const AboutMe = () => {
   return (
     <div className="readme-container">
-      <div className="cropped-image">
-        <img src={headshot} className='headshot' alt="Me" />
-      </div>
-        <h1>
-          William Wassmann         
-        </h1>
-          <button className='pdf-button'>
-            <Download />
-          </button>
         <div className='aboutme-body'>
           <div className="text-container">
             <p className='text-body'>
@@ -28,9 +19,22 @@ const AboutMe = () => {
               Prior to my transition to software engineering, I pursued a Bachelor's degree in Theatre Arts at the University of Washington and spent 15 years as a professional actor. This background has equipped me with strong communication skills, creativity, and the ability to adapt to diverse challenges.
             </p>
           </div>   
+          <div className="profile-container">
+            <div className="cropped-image">
+              <img src={headshot} className='headshot' alt="Me" />
+            </div>
+            <h1 className="my-name">
+              William Wassmann         
+            </h1>
+            <button className='pdf-button'>
+              <Download />
+            </button>
+          </div>      
           <div className='about-me-skills-container'>
-            <Skillsets/>
-          </div>     
+            <div className="flank right">
+              <Skillsets/>
+            </div>     
+          </div>
         </div>
     </div>
   );

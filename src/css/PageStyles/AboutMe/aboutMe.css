@@ -1,27 +1,50 @@
 
 .readme-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 20px auto;
-  padding-top: 20px;  
-  width: 90%;
-  border: 1px solid #ccc;
-  background-color: #f3f3f3;
+  padding-top: 20px; 
+  /* border: 1px solid #ccc; */
+  /* background-color: #f3f3f3; */
   font-family: 'Arial', sans-serif;
 } 
 
-.aboutme-body {
+
+.text-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  position: fixed; 
+  top: 20.5rem; 
+  left: 5%; 
+  width: 33%;
 
 }
 
-.about-me {  
-  margin-top: 8.5rem;
+
+.profile-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 33%;
+  margin: auto;
+}
+
+
+.aboutme-body {
+  display: flex;
+  flex-direction: row;  
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;  
 }
 
 .sub-header {
@@ -57,10 +80,10 @@
 }
 
 .resume-button a {
-     display: block;
-     width: 100%;
-     height: 100%;
-     position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .pdf-button:hover {
@@ -85,20 +108,24 @@ p {
   font-size: 1.1rem;
 }
 
-.text-container {
-  padding-left: 10%;
-  width: 65%;    
-}
 
 .about-me-skills-container {
   display: flex;
   justify-content: center;
   padding: 2.3rem;
-  width: 35%; 
+  align-items: center;
+  position: fixed; 
+  top: 15%;
+  bottom: 0;
+  left: 46%;
+  right: 0;
+  width: 33%;
+  margin: auto;
 }
 
 .text-body {
   padding: 2.3rem;
+  /* transform: skew(-20deg); */
 }
 
 

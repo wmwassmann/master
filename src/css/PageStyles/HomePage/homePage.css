@@ -7,22 +7,6 @@
     height: 100vh;   
 }
 
-.home-info {    
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 6rem;
-    width: 500px;
-    font-family: 'Arial', sans-serif;
-    /* transition: transform 0.5s ease-in-out; */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
-    color: hsl(0, 0%, 100%);
-    background-color: #777;
-    transform: skew(-20deg);
-    z-index: -1;
-}
-
 .name {
     font-size: 2rem;
     align-self: center;  
@@ -70,15 +54,17 @@
 }
 
 .left {
+    /* position: fixed; */
     animation-duration: 0.4s;
     animation-name: slideInLeft;
     animation-timing-function: ease-out;
 }
 
 .right {
+    /* position: fixed; */
     animation-duration: 0.4s;
     animation-name: slideInRight;
-    animation-timing-function: ease forwards;
+    animation-timing-function: ease-out;
 }
 
 .out-left {
@@ -91,7 +77,42 @@
     animation-name: slideOutRight;
 }
 
+@keyframes slideInLeft {
+    from {
+        transform: skew(-20deg) translateX(-100%);
+    }
+    to {
+        transform: skew(-20deg) translateX(0%);
+    }
+}
 
+@keyframes slideInRight {
+    from {
+        transform: skew(-20deg) translateX(100%); /* Adjust as needed */
+    }
+    to {
+        transform: skew(-20deg) translateX(0%);
+    }
+}
+
+@keyframes slideOutLeft { 
+    from {
+        transform: skew(-20deg) translateX(0%);
+    }
+    to {
+        transform: skew(-20deg) translateX(-200%); /* Adjust as needed */
+    }
+}
+
+@keyframes slideOutRight { 
+    from {
+        transform: skew(-20deg) translateX(0%);
+    }
+    to {
+        transform: skew(-20deg) translateX(200%); /* Adjust as needed */
+    }
+}
+/* 
 @keyframes slideInLeft {
     from {
         margin-right: 50%; 
@@ -127,7 +148,7 @@
     to {
         margin-left: 50%;
     }
-}
+} */
 
 .center-title {
     display: flex;

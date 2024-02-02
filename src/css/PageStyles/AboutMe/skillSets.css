@@ -26,7 +26,7 @@
     margin:0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
-    transform: skew(-20deg);
+    /* transform: skew(-20deg); */
     background-color: rgb(255, 255, 255);
   }
 
@@ -54,7 +54,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%); 
     background-color: rgb(255, 255, 255); 
-    transform: skew(-20deg);  
+    /* transform: skew(-20deg);   */
   }
 
 
@@ -98,7 +98,7 @@
 
   @media screen and (max-width: 800px) {
     .skillset {
-      height: 250px;
+      height: 250px;      
     }
 
     .head-name {

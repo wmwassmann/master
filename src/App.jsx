@@ -1,7 +1,7 @@
 import "./css/globalStyle.css";
 import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
-import AboutMe from "./pages/AboutMe";
+// import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Game from "./pages/Game";
 import Resume from "./pages/Resume";
@@ -13,8 +13,8 @@ export default function App() {
         <Navbar /> 
         <Routes>
           {/* routes */}
-          <Route path="/" element={<HomePage/> } />      
-          <Route path="/about" element={<AboutMe/>} />
+          <Route path="/home" element={<HomePage/> } />      
+          {/* <Route path="/about" element={<AboutMe/>} /> */}
           <Route path="/resume" element={<Resume/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/game" element={<Game/>} />
