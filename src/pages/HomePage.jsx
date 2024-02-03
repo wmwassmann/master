@@ -15,38 +15,40 @@ const homePage =()=> {
   }, [animationDelay]);
   
     return (
-      <div>
       <div className="home-container">
-        <div className="flank left">
-            <div className="home-title">
-             design
-            </div>
-            <div className="home-article">
-            Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
-            </div>
-        </div>
-          <div>
-            <div className="center-title">             
-              <div className="github">
-                <Link className="link" to="https://github.com/wmwassmann/master" target="_blank" rel="noopener noreferrer">
-                  <div className="link-title">
-                    GitHub
-                  </div>
-                </Link>
+
+        <div className="flank-left-container">
+          <div className="flank left">
+              <div className="home-title">
+              design
               </div>
-            </div>
-            {/* <div className="skill-blocks">            
-              <Skillsets/>
-            </div> */}
+              <div className="home-article">
+              Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
+              </div>
           </div>
-        <div className="flank right">
-          <div className="home-title">software</div>
-          <div className="home-article">
-            Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems            
+        </div>
+
+        <div className="center-title">             
+          <div className="github">
+            <Link className="link" to="https://github.com/wmwassmann/master" target="_blank" rel="noopener noreferrer">
+              <div className="link-title">
+                GitHub
+              </div>
+            </Link>
+          </div>
+        </div>
+          
+        <div className="flank-right-container">
+          <div className="flank right">
+            <div className="home-title">
+              software
+              </div>
+            <div className="home-article">
+              Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems            
+            </div>
           </div>
         </div>
       </div>
-    </div>
     );
   };
 

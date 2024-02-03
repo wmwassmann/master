@@ -2,9 +2,12 @@
 /* Additional styling for the .home-container */
 .home-container {
     display: flex;
-    color: #131313;
-    justify-content: space-around;
-    height: 100vh;   
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px auto;
+    padding-top: 20px; 
+    font-family: 'Arial', sans-serif;  
 }
 
 .name {
@@ -40,10 +43,25 @@
     color: hsl(0, 0%, 100%);   
 }
 
+.flank-left-container, .flank-right-container {
+    display: flex;
+    justify-content: center;
+    padding: 2.3rem;
+    align-items: center;
+    top: 15%;
+    bottom: 0;
+    right: 0;
+    width: 33%;
+    margin: auto;
+  }
+
+/* 
 .home-title {
-    width: 500px;
+    display: flex;
+    align-self: center;
+    font-size: 4rem;
     transform: skew(20deg);
-}
+} */
 
 .home-article {
     font-size: 1rem; 
@@ -51,6 +69,12 @@
     padding: .5rem;
     font-family: 'Arial', sans-serif;
     transform: skew(20deg);
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-self: center;  
 }
 
 .left {
@@ -100,7 +124,7 @@
         transform: skew(-20deg) translateX(0%);
     }
     to {
-        transform: skew(-20deg) translateX(-200%); /* Adjust as needed */
+        transform: skew(-20deg) translateX(-200%);
     }
 }
 
@@ -109,53 +133,16 @@
         transform: skew(-20deg) translateX(0%);
     }
     to {
-        transform: skew(-20deg) translateX(200%); /* Adjust as needed */
-    }
-}
-/* 
-@keyframes slideInLeft {
-    from {
-        margin-right: 50%; 
-    }
-    to {
-        margin-right: 0%;
+        transform: skew(-20deg) translateX(200%); 
     }
 }
 
-@keyframes slideInRight {
-    from {
-        margin-left: 50%;
-    }
-    to {
-        margin-left: 0%;
-    }
-}
-
-
-@keyframes slideOutLeft { 
-    from {
-        margin-right: 0%;
-    }
-    to {
-        margin-right: 50%;
-    }
-}
-
-@keyframes slideOutRight { 
-    from {
-        margin-left: 0%;
-    }
-    to {
-        margin-left: 50%;
-    }
-} */
 
 .center-title {
     display: flex;
     opacity: 0;
     color: black;
     height: 100vh;
-    padding-bottom: 15%;
     animation: fadeIn 0.5s ease forwards;
     font-family:'Arial', sans-serif;
     flex-direction: column;
@@ -182,14 +169,7 @@
     }
 }
 
-.github {
-    display: flex;
-    font-size: 4.5rem;    
-    padding: 110px; 
-    Margin: 50px 20px 15px 20px; 
-    justify-content: center;
-    align-self: center;    
-}
+
 
 
 

@@ -10,7 +10,9 @@ import Navbar from "./components/Navbar";
 export default function App() {
   return ( 
       <>
+      <div className="nav-global">
         <Navbar /> 
+      </div>
         <Routes>
           {/* routes */}
           <Route path="/" element={<HomePage/> } />      
