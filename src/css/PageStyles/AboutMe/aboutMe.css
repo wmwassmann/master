@@ -6,8 +6,6 @@
   align-items: center;
   margin-top: 20px auto;
   padding-top: 20px; 
-  /* border: 1px solid #ccc; */
-  /* background-color: #f3f3f3; */
   font-family: 'Arial', sans-serif;
 } 
 
@@ -42,10 +40,6 @@
   flex-direction: row;  
 }
 
-.about-me {
-  display: flex;
-  justify-content: center;  
-}
 
 .sub-header {
   font-size: 1.1rem;

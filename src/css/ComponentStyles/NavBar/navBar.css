@@ -58,15 +58,16 @@
     font-size: 4rem;
     color: #333;
     margin-left: 2rem;
+    height:100%;    
 }
 
 .title-name {
     font-size: 1.1rem;
+    height:100%;   
     color: #333;
-}
-
-
+} 
 
 .nav-link:hover {
+    
     transform: skew(20deg);
 }
