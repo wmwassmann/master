@@ -56,14 +56,18 @@
 .home-title {
     display: flex;
     align-self: center;
-    font-size: 4rem;
-    transform: skew(20deg);
+    font-size: calc(.5em + 4vw);
+    transform: skew(20deg);;
 }
 
 .home-article {
-    font-size: 1rem; 
+    font-size: calc(.5em + 0.3vw);
+    display: flex;
+    align-self: center;
     text-align: center;
-    padding: .5rem;
+    padding-left: .5rem;
+    padding-top: .2rem;
+    width: 15vw;
     font-family: 'Arial', sans-serif;
     transform: skew(20deg);
 }
@@ -71,8 +75,7 @@
 .github {
     display: flex;
     justify-content: center;
-    /* align-self: center;   */
-    font-size: 4rem;
+    font-size: calc(.5em + 4vw);
 }
 
 .left {

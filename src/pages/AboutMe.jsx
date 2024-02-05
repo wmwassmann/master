@@ -10,7 +10,7 @@ const AboutMe = () => {
         <div className='aboutme-body'>
           <div className="text-container">
             <p className='text-body'>
-              I am a results-driven Software Engineer with over 2 years of experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems. My expertise lies in UX/UI integrations, platform upgrades, and data retrieval and manipulations, ensuring seamless and efficient operations.
+              I am a results-driven Software Engineer with over 2 years of experience in developing, maintaining, and testing stable, scalable, and secure automated financial systems. My expertise lies in UX/UI integrations, platform upgrades, and data retrieval and manipulations, ensuring seamless and efficient operations.
             </p>
             <p className='text-body'>
               In 2020, I completed The University of Washington's web development boot camp, enhancing my skills and staying current with the latest technologies in the ever-evolving field of software engineering.

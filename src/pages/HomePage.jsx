@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../css/PageStyles/HomePage/homePage.css"
-import Skillsets from "../components/Skillset";
 import { Link } from 'react-router-dom';
 
 const homePage =()=> {
