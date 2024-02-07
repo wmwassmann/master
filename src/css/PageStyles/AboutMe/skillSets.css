@@ -22,7 +22,7 @@
   .skill-head {
     padding: 8px; 
     width: inherit;
-    font-size: calc(.5em + 1vw);
+    font-size: calc(.5em + 0.5vw);
     margin:0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%);
@@ -48,13 +48,12 @@
   .skillset li {    
     color: #000;
     margin: 8px 0;
-    font-size: calc(.5em + 1vw);;
+    font-size: calc(.5em + 0.4vw);;
     font-weight: bold;
     padding: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     color: hsl(0, 0%, 3%); 
     background-color: rgb(255, 255, 255); 
-    /* transform: skew(-20deg);   */
   }
 
 
@@ -75,25 +74,6 @@
     transform: skew(-20deg);  
   }
 
-/* 
-
-  @media screen and (min-width: 800px) {
-    .skillset li {
-      font-size: 1rem;
-    }
-  }
-  
-  @media screen and (min-width: 1800px) {
-    .skillset li {
-      font-size: 1.1rem;
-    }
-  }
-
-  @media screen and (min-width: 2468px) {
-    .skillset li {
-      font-size: 1.2rem;
-    }
-  } */
 
 
   @media screen and (max-width: 800px) {
