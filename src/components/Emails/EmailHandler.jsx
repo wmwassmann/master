@@ -12,7 +12,7 @@ const sendCustomEmail = (details) => {
                 your_name: details.your_name,
                 your_email: details.your_email,
                 subject: details.subject,
-                message: details.message
+                message: details.message                
             }        
         )
         .then((response)=> {

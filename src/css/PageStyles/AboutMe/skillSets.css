@@ -75,14 +75,3 @@
   }
 
 
-
-  @media screen and (max-width: 800px) {
-    .skillset {
-      height: 250px;      
-    }
-
-    .head-name {
-      width: 20vw;
-      font-size: 1.2rem;
-    }
-  }

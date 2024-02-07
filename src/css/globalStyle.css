@@ -30,7 +30,7 @@ a {
 
 
 .flank {    
-  padding: 5rem;
+  padding: calc(0.6rem + 0.6vw);;
   display: flex;
   flex-direction: column;
   justify-content: center;

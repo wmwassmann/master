@@ -55,10 +55,10 @@
 
 .pdf-button {   
   margin: 8px 0;
-  font-size: 1.4rem;
+  font-size: calc(1.0rem + 0.5vw);
   font-weight: bold;
-  width: 22rem;
-  padding: 6px;
+  width: calc(2rem + 15vw);
+  padding: calc(0.5rem + 0.5vw);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   color: hsl(0, 67%, 98%);
   background-color: rgb(255, 255, 255);
@@ -118,20 +118,18 @@ p {
 }
 
 .text-body {
-  padding: 2.3rem;
-  font-size: calc(.5em + 0.7vw);
-}
-
-
-.headshot-container {
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  padding: .5rem;
+  padding: calc(1rem + 0.5vw);
+  font-size: calc(.5em + 0.5vw);
 }
 
 .headshot {
   max-height: 350px;  
+}
+
+.my-name {
+  font-size: calc(1.0em + 0.8vw);
+  display: flex;
+  text-align: center;
 }
 
 .cropped-image {

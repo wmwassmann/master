@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { sendCustomEmail } from "./EmailHandler";
 import "../../css/ComponentStyles/Contact/email.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const EmailForm = () => {
     const env = <FontAwesomeIcon icon={faEnvelope} />
@@ -13,6 +13,10 @@ const EmailForm = () => {
         subject: "",
         message: "",
     });
+
+    const [disabled, setDisabled] = useState(false);
+
+    const [emailSent, setEmailSent] = useState(false); // State to track if email is sent
 
     const handleDetailsChange = (event) => {
         const { name, value } = event.target;
@@ -26,7 +30,19 @@ const EmailForm = () => {
     };
 
     const handleSendEmail = () => {
-        sendCustomEmail(details);
+        
+        if ((!details.your_name) || (!details.your_email) || (!details.message)) {
+            console.log("NOT VALID!");
+            return;
+        } else if (disabled === true) {
+            console.log("An message has already been sent by that email address")
+            return;
+        } else {
+            console.log("Success");
+            sendCustomEmail(details);
+            setDisabled(true);
+            setEmailSent(true); // Update state to indicate email is sent
+        }
     };
 
     const maxMessageLength = 500;
@@ -86,31 +102,35 @@ const EmailForm = () => {
             </div>
             <button
                 className="send-email"
-                disabled={!details.your_name || !details.your_email || !details.message}
                 onClick={handleSendEmail}
             >
                 <span className="email-btn-text">Send Email</span>
             </button>
+            {/* Hidden div for email sent message */}
+            {emailSent && <div className="email-sent">Your email has been sent!</div>}
         </div>
     );
 };
 
 export default EmailForm;
 
-// import { useState } from "react";
-// import { sendCustomEmail } from "./EmailHandler";
-// import "../../css/ComponentStyles/Contact/email.css"
 
+
+// import React, { useState } from "react";
+// import { sendCustomEmail } from "./EmailHandler";
+// import "../../css/ComponentStyles/Contact/email.css";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 // const EmailForm = () => {
-
-//     const [details, setDetails] = useState ({
-//         your_name: '',
-//         your_email: '',
-//         subject: '',
-//         message: '',
-//     })
+//     const env = <FontAwesomeIcon icon={faEnvelope} />
     
+//     const [details, setDetails] = useState({
+//         your_name: "",
+//         your_email: "",
+//         subject: "",
+//         message: "",
+//     });
 
 //     const handleDetailsChange = (event) => {
 //         const { name, value } = event.target;
@@ -124,14 +144,23 @@ export default EmailForm;
 //     };
 
 //     const handleSendEmail = () => {
-//         sendCustomEmail(details);
-//     }
-    
+        
+//         if ((!details.your_name) || (!details.your_email) || (!details.message)) {
+//             console.log("NOT VALID!");
+//             return;
+//         } else {
+//             console.log("Success")
+//             sendCustomEmail(details);
+//         }
+//     };
+
+//     const maxMessageLength = 500;
+//     const remainingCharacters = maxMessageLength - details.message.length;
+//     const characterLimitReached = remainingCharacters <= 50;
+
 //     return (
 //         <div className="email-container">
-//             <h1 className="contact-head">
-//                 Contact Me
-//             </h1>
+//             <h1 className="contact-head">{env} Contact Me</h1>
 //             <div className="email-head">
 //                 <div className="input-container">
 //                     <input
@@ -141,7 +170,7 @@ export default EmailForm;
 //                         onChange={handleDetailsChange}
 //                         type="text"
 //                         placeholder="Name *"
-//                         />
+//                     />
 //                 </div>
 //                 <div className="input-container">
 //                     <input
@@ -151,7 +180,7 @@ export default EmailForm;
 //                         onChange={handleDetailsChange}
 //                         type="email"
 //                         placeholder="Email *"
-//                         />
+//                     />
 //                 </div>
 //             </div>
 //             <div className="email-body">
@@ -163,7 +192,7 @@ export default EmailForm;
 //                         onChange={handleDetailsChange}
 //                         type="text"
 //                         placeholder="Subject (optional)"
-//                         />
+//                     />
 //                 </div>
 //                 <div className="message-container">
 //                     <textarea
@@ -172,21 +201,23 @@ export default EmailForm;
 //                         value={details.message}
 //                         onChange={handleDetailsChange}
 //                         type="text"
-//                         // maxLength={500}
+//                         maxLength={maxMessageLength}
 //                         placeholder="Message *"
-//                         />
+//                     />
+//                     <span className={characterLimitReached ? "character-limit reached" : "character-limit"}>
+//                         {remainingCharacters} characters {characterLimitReached}
+//                     </span>
 //                 </div>
 //             </div>
-//             <button 
+//             <button
 //                 className="send-email"
-//                 disabled={!details.your_name || !details.your_email || !details.message }
+//                 // disabled={!details.your_name || !details.your_email || !details.message}
 //                 onClick={handleSendEmail}
-//                 >
+//             >
 //                 <span className="email-btn-text">Send Email</span>
 //             </button>
 //         </div>
-//     )
-// }
+//     );
+// };
 
-
-// export default EmailForm
+// export default EmailForm;
