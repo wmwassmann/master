@@ -6,21 +6,19 @@
 }
 
 .contacts-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .contacts-info {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    /* border-radius: 8px; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 250px;
-    width: 200px; 
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    color: black;
-     
-  }
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.contacts-info {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  width: 200px; 
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  color: black;
+}

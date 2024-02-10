@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/PageStyles/AboutMe/aboutMe.css';
 import headshot from '../assets/headshot.jpg'
 import Download from '../components/Contact/PdfHandler';
-import Skillsets from '../components/Skillset';
+import Skillsets from '../components/Skillset/Skillset';
 
 const AboutMe = () => {
   return (

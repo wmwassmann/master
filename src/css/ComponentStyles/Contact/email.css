@@ -1,3 +1,5 @@
+/* Outer Containment */
+
 .email-container, .input-container {
     display: flex;
     flex-direction: column;
@@ -16,6 +18,8 @@
     flex-direction: row;
 }
 
+/* Sender Containment */
+
 .input-container {    
     padding-bottom: 3%;
 }
@@ -23,7 +27,6 @@
 .input-name {
     height: 30px;
     width: 245px;
-
 }
 
 .input-subject, .input-content {    
@@ -59,6 +62,8 @@
     overflow-wrap: break-word;
 }
 
+/* Send Button */
+
 .send-email {
     margin: 8px 0;
     font-size: 1.4rem;
@@ -90,6 +95,7 @@
     background-color: rgba(0, 0, 0, 0.1); 
 }
 
+/* (Aux) Char Limiter */
 
 .character-limit {
     display: flex;

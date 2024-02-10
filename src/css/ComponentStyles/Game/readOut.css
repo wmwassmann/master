@@ -10,7 +10,7 @@
   }
   
   .highlighted-letter {
-    color: black; /* Change the color to your desired highlighting style */
-    font-weight: bold; /* Add any other styling you want for the highlighted letter */
+    color: black;
+    font-weight: bold;
     visibility: visible;
   }

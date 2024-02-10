@@ -1,3 +1,4 @@
+/* === Outer Text Containment === */
 
 .readme-container {
   display: flex;
@@ -9,6 +10,10 @@
   font-family: 'Arial', sans-serif;
 } 
 
+.aboutme-body {
+  display: flex;
+  flex-direction: row;  
+}
 
 .text-container {
   display: flex;
@@ -17,9 +22,30 @@
   margin-top: 10vh;
   left: 5%; 
   width: 33%;
-
+  
 }
 
+/* Text Items */
+
+.text-body {
+  padding: calc(1rem + 0.5vw);
+  font-size: calc(.5em + 0.5vw);
+}
+
+h1 {
+  color: #333;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* ===  Headshot Items === */
 
 .profile-container {
   display: flex;
@@ -34,24 +60,7 @@
   margin: auto;
 }
 
-
-.aboutme-body {
-  display: flex;
-  flex-direction: row;  
-}
-
-
-.sub-header {
-  font-size: 1.1rem;
-}
-
-.header-container {
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0.5rem;
-}
+/* Pdf Button Items */
 
 .pdf-button {   
   margin: 8px 0;
@@ -74,10 +83,10 @@
 }
 
 .resume-button a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .pdf-button:hover {
@@ -89,38 +98,7 @@
   color: hsl(0, 0%, 100%); 
 }
 
-h1 {
-  color: #333;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-p {
-  text-align: justify;
-  line-height: 1.6;
-  color: #555;
-  font-size: 1.1rem;
-}
-
-
-.about-me-skills-container {
-  display: flex;
-  justify-content: center;
-  padding: 2.3rem;
-  align-items: center;
-  position: fixed; 
-  top: 15%;
-  bottom: 0;
-  left: 46%;
-  right: 0;
-  width: 33%;
-  margin: auto;
-}
-
-.text-body {
-  padding: calc(1rem + 0.5vw);
-  font-size: calc(.5em + 0.5vw);
-}
+/* Personal Items */
 
 .headshot {
   max-height: 350px;  
@@ -138,6 +116,38 @@ p {
   overflow: hidden; 
   border-radius: 50%;    
 }
+
+.header-container {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+
+
+
+/* FLAG for deletion - May be unneccessary nesting */
+/* === Skills Outer Containment === */
+
+.about-me-skills-container {
+  display: flex;
+  justify-content: center;
+  padding: 2.3rem;
+  align-items: center;
+  position: fixed; 
+  top: 15%;
+  bottom: 0;
+  left: 46%;
+  right: 0;
+  width: 33%;
+  margin: auto;
+}
+
+
+
+/* Flag for Deletion - Method Obsolete  */
 
 @media screen and (min-width: 600px) {    
   p {
