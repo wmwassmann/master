@@ -10,14 +10,9 @@ const EmailForm = () => {
 
     const env = <FontAwesomeIcon icon={faEnvelope} />
 
-    // Message Counter
-
-    const maxMessageLength = 500;
-    const remainingCharacters = maxMessageLength - details.message.length;
-    const characterLimitReached = remainingCharacters <= 50;
     
     // Email State Details 
-
+    
     const [details, setDetails] = useState({
         your_name: "",
         your_email: "",
@@ -29,12 +24,12 @@ const EmailForm = () => {
 
     const [disabled, setDisabled] = useState(false);
     const [emailSent, setEmailSent] = useState(false); 
-
+    
     // On Click 
-
+    
     const handleDetailsChange = (event) => {
         const { name, value } = event.target;
-
+        
         setDetails((prevDetails) => {
             return {
                 ...prevDetails,
@@ -44,7 +39,7 @@ const EmailForm = () => {
     };
 
     // Click Handler
-
+    
     const handleSendEmail = () => {    
         if ((!details.your_name) || (!details.your_email) || (!details.message)) {
             console.log("NOT VALID!");
@@ -57,7 +52,13 @@ const EmailForm = () => {
             setEmailSent(true); 
         }
     };
+    
+    // Message Counter
 
+    const maxMessageLength = 500;
+    const remainingCharacters = maxMessageLength - details.message.length;
+    const characterLimitReached = remainingCharacters <= 50;
+    
     return (
         <div className="email-container">
             <h1 className="contact-head">{env} Contact Me</h1>
@@ -70,7 +71,7 @@ const EmailForm = () => {
                         onChange={handleDetailsChange}
                         type="text"
                         placeholder="Name *"
-                    />
+                        />
                 </div>
                 <div className="input-container">
                     <input
