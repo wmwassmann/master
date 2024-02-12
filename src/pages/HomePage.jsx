@@ -18,10 +18,10 @@ const homePage =()=> {
 
         <div className="flank-left-container">
           <div className="flank left">
-              <div className="home-title">
+              <div className="home-title skew-correct">
               design
               </div>
-              <div className="home-article">
+              <div className="home-article skew-correct">
               Specializations in UX/UI integrations, platform upgrades, and data retrieval and manipulations
               </div>
           </div>
@@ -30,7 +30,7 @@ const homePage =()=> {
         <div className="center-title">             
           <div className="github">
             <Link className="link" to="https://github.com/wmwassmann/master" target="_blank" rel="noopener noreferrer">
-              <div className="link-title">
+              <div className="link-title skew-correct">
                 GitHub
               </div>
             </Link>
@@ -39,10 +39,10 @@ const homePage =()=> {
           
         <div className="flank-right-container">
           <div className="flank right">
-            <div className="home-title">
+            <div className="home-title skew-correct">
               software
               </div>
-            <div className="home-article">
+            <div className="home-article skew-correct">
               Two years experience in developing, testing, and maintaining stable, scalable, and secure automated financial systems            
             </div>
           </div>

@@ -11,7 +11,7 @@ class Download extends Component {
     const pdf = <FontAwesomeIcon icon={faFilePdf} />
 
     return (
-        <div className='resume-button'>
+        <div className='resume-button skew-correct'>
           <a href={Pdf} target="_blank">Resume {pdf}</a>
         </div>
     );

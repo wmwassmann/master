@@ -31,17 +31,17 @@
 /* Individual Items */
 
 .skill-head {
+  margin: 0;
   padding: 8px; 
   width: inherit;
   font-size: calc(.5em + 0.5vw);
-  margin:0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   color: hsl(0, 0%, 3%);
   background-color: rgb(255, 255, 255);
 }
 
 .head-name {
-  transform: skew(20deg);
+  /* === No Unique Styling === */
 }
 
 .skill-compartment li {    

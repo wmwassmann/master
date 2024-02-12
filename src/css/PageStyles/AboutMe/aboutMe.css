@@ -79,7 +79,6 @@ p {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: skew(20deg);
 }
 
 .resume-button a {

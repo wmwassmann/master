@@ -57,7 +57,7 @@ const Skillsets = () => {
       <div className="skillsets-container">
           <div className={`skill-compartment lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
-              <div className="head-name">                
+              <div className="head-name skew-correct">                
                 Languages {arw}
               </div>
             </h2>
@@ -71,7 +71,7 @@ const Skillsets = () => {
           </div>
           <div className={`skill-compartment data ${hoveredSkillset === 'data' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('data')} onMouseLeave={handleLeave}>
-              <div className="head-name">
+              <div className="head-name skew-correct">
               Databases {arw}
               </div>
             </h2>
@@ -85,7 +85,7 @@ const Skillsets = () => {
           </div>
           <div className={`skill-compartment dev ${hoveredSkillset === 'dev' ? 'revealed' : ''}`}>
               <h2 className="skill-head" onMouseEnter={() => handleHover('dev')} onMouseLeave={handleLeave}>
-                <div className="head-name">
+                <div className="head-name skew-correct">
                   Development {arw}
                 </div>
                 </h2>
@@ -99,7 +99,7 @@ const Skillsets = () => {
           </div>
           <div className={`skill-compartment man ${hoveredSkillset === 'man' ? 'revealed' : ''}`}>
               <h2 className="skill-head" onMouseEnter={() => handleHover('man')} onMouseLeave={handleLeave}>
-                <div className="head-name">
+                <div className="head-name skew-correct">
                   Management {arw}
                 </div>
               </h2>

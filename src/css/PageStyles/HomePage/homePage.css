@@ -27,7 +27,7 @@
     display: flex;
     align-self: center;
     font-size: calc(.5em + 4vw);
-    transform: skew(20deg);;
+    /* transform: skew(20deg); */
 }
 
 .home-article {
@@ -39,7 +39,7 @@
     padding-top: .2rem;
     width: 15vw;
     font-family: 'Arial', sans-serif;
-    transform: skew(20deg);
+    /* transform: skew(20deg); */
 }
 
 
