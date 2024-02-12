@@ -1,43 +1,11 @@
 
-/* Additional styling for the .home-container */
+/* === Home Page Containment === */
+
 .home-container {
     display: flex;
     justify-content: center;  
     position: fixed;
     width: 100vw;
-}
-
-.name {
-    font-size: 2rem;
-    align-self: center;  
-}
-
-.link {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 15px; 
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    color: hsl(0, 0%, 3%);
-    transform: skew(-20deg);
-}
-
-.link-title {
-    transform: skew(20deg);
-}
-
-.link.active {
-    background-color: #fff;
-    color: #333; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
-}
-
-.link:hover, .skill-head:hover {
-    background-color: #777; 
-    transition: background-color 0.3s; 
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
-    color: hsl(0, 0%, 100%);   
 }
 
 .flank-left-container, .flank-right-container {
@@ -50,8 +18,10 @@
     right: 0;
     width: 33%;
     margin: auto;
-  }
+}
 
+
+/* Hope Page Items */
 
 .home-title {
     display: flex;
@@ -72,34 +42,70 @@
     transform: skew(20deg);
 }
 
+
+/* === GitHub Title Containment === */
+
+.center-title {
+    display: flex;
+    opacity: 0;
+    color: black;
+    animation: fadeIn 0.5s ease forwards;
+    font-family:'Arial', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* GitHub Title Items  */
+
 .github {
     display: flex;
     justify-content: center;
     font-size: calc(.5em + 4vw);
 }
 
+.link-title {
+    transform: skew(20deg);
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px; 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 3%);
+    transform: skew(-20deg);
+}
+
+.link.active {
+    background-color: #fff;
+    color: #333; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+.link:hover, .skill-head:hover {
+    background-color: #777; 
+    transition: background-color 0.3s; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    color: hsl(0, 0%, 100%);   
+}
+
+
+/* === Animations === Animations === Animations ==== */
+
+/* (Aux) Flank Animations === Slide In */
+
 .left {
-    /* position: fixed; */
     animation-duration: 0.4s;
     animation-name: slideInLeft;
     animation-timing-function: ease-out;
 }
 
 .right {
-    /* position: fixed; */
     animation-duration: 0.4s;
     animation-name: slideInRight;
     animation-timing-function: ease-out;
-}
-
-.out-left {
-    animation-duration: .3s;
-    animation-name: slideOutLeft;
-}
-
-.out-right {
-    animation-duration: .3s;
-    animation-name: slideOutRight;
 }
 
 @keyframes slideInLeft {
@@ -113,11 +119,23 @@
 
 @keyframes slideInRight {
     from {
-        transform: skew(-20deg) translateX(100%); /* Adjust as needed */
+        transform: skew(-20deg) translateX(100%);
     }
     to {
         transform: skew(-20deg) translateX(0%);
     }
+}
+
+/* (Aux) Flank Animations === Slide Out  */
+
+.out-left {
+    animation-duration: .3s;
+    animation-name: slideOutLeft;
+}
+
+.out-right {
+    animation-duration: .3s;
+    animation-name: slideOutRight;
 }
 
 @keyframes slideOutLeft { 
@@ -138,16 +156,7 @@
     }
 }
 
-
-.center-title {
-    display: flex;
-    opacity: 0;
-    color: black;
-    animation: fadeIn 0.5s ease forwards;
-    font-family:'Arial', sans-serif;
-    flex-direction: column;
-    justify-content: center;
-}
+/* (Aux) GitHub Animations */
 
 .gitOut {
     animation: fadeOut 0.01s;
