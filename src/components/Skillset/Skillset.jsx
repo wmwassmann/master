@@ -9,7 +9,7 @@ const Skillsets = () => {
 
   // SKill Compartments 
   const languageSkills = ['JavaScript', 'Python', 'C#'];
-  const webDevelopmentSkills = ['HTML/CSS', 'Node.js', 'react'];
+  const webDevelopmentSkills = ['HTML/CSS', 'Node.js', 'React'];
   const databaseSkills = [ 'MongoDB','MySQL', 'Kusto'];
   const managementSkills = ['Visual Studio', 'Agile', 'Git'];
 
@@ -64,7 +64,9 @@ const Skillsets = () => {
               <ul>
                 {languageSkills.map((language, index) => (
                   <li className={`skill-item ${hoveredSkillset === 'lan' && isHovered && index <= revealIndex ? 'lan-reveal' : ''}`} key={index}>
-                    {language}
+                    <div className='skew-correct'>
+                      {language}
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -78,7 +80,9 @@ const Skillsets = () => {
               <ul>
                 {databaseSkills.map((language, index) => (
                   <li className={`skill-item ${hoveredSkillset === 'data' && isHovered && index <= revealIndex ? 'data-reveal' : ''}`} key={index}>
-                    {language}
+                    <div className='skew-correct'>
+                      {language}
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -92,7 +96,9 @@ const Skillsets = () => {
                 <ul>
                   {webDevelopmentSkills.map((language, index) => (
                     <li className={`skill-item ${hoveredSkillset === 'dev' && isHovered && index <= revealIndex ? 'dev-reveal' : ''}`} key={index}>
-                      {language}
+                      <div className='skew-correct'>
+                        {language}
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -106,7 +112,9 @@ const Skillsets = () => {
                 <ul>
                   {managementSkills.map((language, index) => (
                     <li className={`skill-item ${hoveredSkillset === 'man' && isHovered && index <= revealIndex ? 'man-reveal' : ''}`} key={index}>
-                      {language}
+                      <div className='skew-correct'>
+                        {language}
+                      </div>
                     </li>
                   ))}
                 </ul>

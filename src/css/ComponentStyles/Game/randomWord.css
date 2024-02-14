@@ -1,13 +1,13 @@
 .start-btn {
-    color: #333;
-    background-color: aqua;
-    display: flex;
-    height: 90px;
-    width: 90px;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 50%;
+  color: #333;
+  background-color: aqua;
+  display: flex;
+  height: 90px;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
 }
 
 .start-btn:hover {
@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  margin-top: 5rem;
+  margin-top: 9rem;
   background-color: rgb(255, 255, 255);
   height: 700px;
   flex-direction: column;

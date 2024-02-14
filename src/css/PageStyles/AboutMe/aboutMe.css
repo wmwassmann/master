@@ -19,10 +19,9 @@
   display: flex;
   flex-direction: column;
   position: fixed; 
-  margin-top: 10vh;
+  margin-top: 30vh;
   left: 5%; 
-  width: 33%;
-  
+  width: 33%;  
 }
 
 /* Text Items */

@@ -37,11 +37,16 @@
   font-size: calc(.5em + 0.5vw);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   color: hsl(0, 0%, 3%);
-  background-color: rgb(255, 255, 255);
+  background-color: #e6e6e6;
 }
 
-.head-name {
-  /* === No Unique Styling === */
+.skill-head:hover {
+  /* === No Unique Styling === */ 
+  color: hsl(0, 0%, 3%); 
+  transition: background-color 0.3s; 
+  box-shadow: 0 0 3px rgb(255, 255, 255); 
+  background-color: rgb(255, 255, 255); 
+  border: 1px solid #ffffff;
 }
 
 .skill-compartment li {    

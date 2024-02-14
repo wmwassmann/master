@@ -26,20 +26,18 @@
 .home-title {
     display: flex;
     align-self: center;
-    font-size: calc(.5em + 4vw);
-    /* transform: skew(20deg); */
+    font-size: calc(min(.5em + 4vw, 90px));
 }
 
 .home-article {
-    font-size: calc(.5em + 0.3vw);
+    font-size: calc(min(.5em + 0.3vw, 20px));
     display: flex;
     align-self: center;
     text-align: center;
     padding-left: .5rem;
     padding-top: .2rem;
-    width: 15vw;
+    width: calc(min(15vw, 300px));
     font-family: 'Arial', sans-serif;
-    /* transform: skew(20deg); */
 }
 
 
@@ -60,7 +58,7 @@
 .github {
     display: flex;
     justify-content: center;
-    font-size: calc(.5em + 4vw);
+    font-size: calc(min(.5em + 4vw, 90px));
 }
 
 .link-title {
@@ -84,11 +82,13 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
-.link:hover, .skill-head:hover {
+.link:hover {
     background-color: #777; 
     transition: background-color 0.3s; 
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
     color: hsl(0, 0%, 100%);   
+    box-shadow: 0 0 7px rgb(255, 255, 255); 
+    border: 2px solid #9d9d9d;
 }
 
 
