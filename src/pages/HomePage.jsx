@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../css/PageStyles/HomePage/homePage.css"
 import { Link } from 'react-router-dom';
 
-const homePage =()=> {
+const HomePage =()=> {
 
   const [animationDelay, setAnimationDelay] = useState(1);
 
@@ -51,4 +51,4 @@ const homePage =()=> {
     );
   };
 
-export default homePage;
+export default HomePage;
