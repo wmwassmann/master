@@ -6,6 +6,7 @@ import Skillsets from '../components/Skillset/Skillset';
 
 const AboutMe = () => {
   const [typedText, setTypedText] = useState('');
+  const [onLoad, setOnLoad] = useState(false);
   const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0);
   const paragraphs = [
     "Hello! I am a results-driven Software Engineer with over 2 years of experience in developing, maintaining, and testing stable, scalable, and secure automated financial systems. My expertise lies in UX/UI integrations, platform upgrades, and data retrieval ensuring seamless and efficient operations.",
@@ -15,22 +16,25 @@ const AboutMe = () => {
 
   useEffect(() => {
     const startTyping = () => {    
+      console.log(currentParagraphIndex) 
       typeText(paragraphs[currentParagraphIndex]);
     };
 
-    startTyping();
-
+    if (onLoad === false) {
+      startTyping()
+      setCurrentParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);
+      setOnLoad(true);
+    }   
 
     const timer = setInterval(() => {
-      // setCurrentParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length); 
-      // startTyping();
-      console.log("Reset Time")
-    }, 6000);    
-    return () => clearInterval(timer);
-   
+      setCurrentParagraphIndex(prevIndex => (prevIndex + 1) % paragraphs.length);    
+      startTyping();
+    }, 12000);    
+    return () => clearInterval(timer);   
   }, [currentParagraphIndex]);
   
   const typeText = (text) => {
+    console.log(text)
     let index = 0;
     const interval = setInterval(() => {
       if (index <= text.length) {
@@ -39,7 +43,7 @@ const AboutMe = () => {
       } else {
         clearInterval(interval);
       }
-    }, 10);
+    }, 30);
   };
 
   return (
