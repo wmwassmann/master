@@ -50,21 +50,20 @@ const AboutMe = () => {
     <div className="readme-container">
       <div className='aboutme-body'>
         <div className="text-container">
-          <p className='text-body'>
-            {typedText}
-          </p>
-        </div>
-        <div className="profile-container">
-          <div className="cropped-image">
-            <img src={headshot} className='headshot' alt="Me" />
+          <div className='outer-bubble'>
+          <div className="profile-container">
+            <div className="cropped-image">
+              <img src={headshot} className='headshot' alt="Me" />
+            </div>
           </div>
-          <h1 className="my-name">
-            William Wassmann
-          </h1>
-          <button className='pdf-button'>
-            <Download />
-          </button>
+            <p className='text-body'>
+              {typedText}
+            </p>
+          </div>
         </div>
+          {/* <h1 className="my-name">
+            William Wassmann
+          </h1> */}
         <div className='about-me-skills-container'>
           <div className="flank right">
             <Skillsets />

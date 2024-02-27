@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../../css/PageStyles/AboutMe/skillSets.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faListAlt } from '@fortawesome/free-regular-svg-icons'
+import Download from '../Contact/PdfHandler';
 
 const Skillsets = () => {
   // Icon
@@ -54,7 +55,10 @@ const Skillsets = () => {
 
   return (
     <div>
-      <div className="skillsets-container">
+      <div className="skillsets-container">        
+          <button className='pdf-button'>
+              <Download />
+          </button>
           <div className={`skill-compartment lan ${hoveredSkillset === 'lan' ? 'revealed' : ''}`}>
             <h2 className="skill-head" onMouseEnter={() => handleHover('lan')} onMouseLeave={handleLeave}>
               <div className="head-name skew-correct">                

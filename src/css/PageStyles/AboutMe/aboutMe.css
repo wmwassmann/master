@@ -12,22 +12,34 @@
 
 .aboutme-body {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;    
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
-  /* position: fixed;  */
-  margin-top: 30vh;
-  width: 33vw;  
+  margin-top: 20vh;
+  width: 60vw;
+  /* border: 1px solid #9d9d9d;
+  border-radius: 50%;      */
 }
 
 /* Text Items */
 
+.outer-bubble {
+  height: 50vh;
+  width: 30vw;
+  border: 1px solid #9d9d9d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .text-body {
   padding: calc(1rem + 0.5vw);
-  font-size: calc(1em + 0.5vw);
+  font-size: calc(.5em + .9vw);
+  height: inherit;
+  width: 30vw;
 }
 
 h1 {
@@ -50,45 +62,36 @@ p {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  width: 33%;
-  margin-top: 15vh;
+  width: 33vw;
+  margin-top: 2vh;
 }
 
 /* Pdf Button Items */
 
 .pdf-button {   
-  margin: 8px 0;
-  font-size: calc(1.0rem + 0.5vw);
-  font-weight: bold;
-  width: calc(2rem + 15vw);
-  padding: calc(0.5rem + 0.5vw);
+  margin: 0;
+  padding: 8px; 
+  width: inherit;
+  font-size: calc(.5em + 0.6vw);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  color: hsl(0, 67%, 98%);
-  background-color: rgb(255, 255, 255);
-  transform: skew(-20deg);
+  color: hsl(0, 0%, 3%);
+  background-color: #e6e6e6;
+  margin-bottom: 9vh;
 }
 
-.resume-button {
+.resume-button a {
   display: inline-block;
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.resume-button a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
 .pdf-button:hover {
-  background-color: #777; 
-  transition: background-color 0.3s;  
-}
-
-.pdf-button:hover .resume-button a { 
-  color: hsl(0, 0%, 100%); 
+  color: hsl(0, 0%, 3%); 
+  transition: background-color 0.3s; 
+  box-shadow: 0 0 3px rgb(255, 255, 255); 
+  background-color: rgb(255, 255, 255); 
+  border: 1px solid #ffffff;
 }
 
 /* Personal Items */
