@@ -39,7 +39,11 @@ export default function Navbar() {
         <nav className="navbar-container">
             <ul>
                 <li className="site-title">
-                    <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>W</Link>
+                    <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>W
+                        <div className="title-extended">
+                            illiam Wassmann
+                        </div>
+                    </Link>
                 </li>
             </ul>
             <ul>
@@ -47,8 +51,11 @@ export default function Navbar() {
                     <Link className="nav-link" to="/resume" onClick={(event) => handleTransition(event, "resume")}>// About Me</Link>
                 </li>
                 <li className="title-name">
-                    <Link className="nav-link" to="/contact" onClick={(event) => handleTransition(event, "contact")}>// Contact Me</Link>
+                    <Link className="nav-link" to="/portfolio" onClick={(event) => handleTransition(event, "game")}>// Portfolio</Link>
                 </li>
+                <li className="title-name">
+                    <Link className="nav-link" to="/contact" onClick={(event) => handleTransition(event, "contact")}>// Contact Me</Link>
+                </li>                
                 <li className="title-name">
                     <Link className="nav-link" to="/game" onClick={(event) => handleTransition(event, "game")}>// Fun(?)</Link>
                 </li>

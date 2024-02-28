@@ -55,6 +55,15 @@
     height:100%;    
 }
 
+.title-extended {
+    font-size: calc(.1em + 2.5vh);
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    padding-bottom: 7px;
+    right: 7px;
+}
+
 .navbar-container li:hover,
 .site-title:hover {
     background-color: #777; 
