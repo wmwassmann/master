@@ -35,4 +35,4 @@ app.get('/portfolio/Tables/portfolio-items', (req, res) => {
   })
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const serverOn = app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
