@@ -1,0 +1,19 @@
+/* === Outer Portfolio Containment === */
+
+.portfolio-outer-container {    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    color: black;
+  
+}
+
+.portfolio-inner-container {
+    display: flex;
+    color: black;
+    padding-left: 15vw;
+    height: 100vh;
+    width: 100vw;
+}
