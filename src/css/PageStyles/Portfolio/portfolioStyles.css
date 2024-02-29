@@ -6,8 +6,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20vh;
-    color: black;
-  
+    color: black;  
 }
 
 .portfolio-inner-container {
@@ -16,4 +15,14 @@
     padding-left: 15vw;
     height: 100vh;
     width: 100vw;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vw;
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
 }

@@ -33,6 +33,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1%;
+  background-color: #ffffff;
 }
 
 .text-body {

@@ -13,26 +13,34 @@ const db = mysql.createConnection({
   database: 'portfolio-database'
 });
 
-// db.connect(err => {
-//   if (err) {
-//     console.log("Nope");
-//     throw err;
-//   }
-//   console.log('Connected to Portfolio Database');
-// });
-
+db.connect(err => {
+  if (err) {
+    console.log("Error connecting to database:", err);
+    throw err;
+  }
+  console.log('Connected to Portfolio Database');
+  
+  const sql = "SELECT `Portfolio Name` FROM `portfolio-items`";
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.log("Error querying database:", err);
+      throw err;
+    }
+    console.log("Data retrieved from portfolio-items table:");
+    console.log(results);
+  });
+});
 
 app.get('/', (req, res) => {
   return res.json("Hello - this is the backend")
 });
 
-
 app.get('/portfolio/Tables/portfolio-items', (req, res) => { 
-  const sql = "SELECT * FROM portfolio-items"
+  const sql = "SELECT * FROM portfolio-items";
   db.query(sql, (err, data)=> {
-    if(err) return res.json(err);
+    if (err) return res.json(err);
     return res.json(data);
-  })
+  });
 });
 
-const serverOn = app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

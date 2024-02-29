@@ -9,10 +9,10 @@
     "deploy": "gh-pages -d build",
     "dev:client": "vite",
     "dev:server": "nodemon server.js",
-    "dev": "start npm run dev:client && npm run dev:server",
+    "dev": "npm run dev:client",
     "build:client": "vite build",
     "build:server": "nodemon server.js",
-    "build": "npm run build:client && npm run build:server",
+    "build": "npm run build:client",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "email": "email dev --dir src/components/Contact"

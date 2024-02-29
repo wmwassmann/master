@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import "../css/PageStyles/Portfolio/portfolioStyles.css"
 
 const Portfolio = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:5173/projects')
-      .then(response => {
-        setProjects(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching project data:', error);
-      });
-  }, []);
+  const [projects, setProjects] = useState([
+    { id: 1, title: 'Project 1', description: 'Description of Project 1' },
+    { id: 2, title: 'Project 2', description: 'Description of Project 2' },
+    { id: 3, title: 'Project 3', description: 'Description of Project 3' }
+  ]);
 
   return (
     <div className='portfolio-outer-container'> 
       <div className='portfolio-inner-container'> 
+      Work in progress
         {projects.map(project => (
           <div key={project.id} className='project-card'>
             <h3>{project.title}</h3>
