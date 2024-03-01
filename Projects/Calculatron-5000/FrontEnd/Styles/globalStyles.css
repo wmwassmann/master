@@ -11,6 +11,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     background: rgb(21, 14, 37);
@@ -75,6 +76,22 @@ input.equal-button {
     width: 150px;
 }
 
+.return-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.return-button button {
+    padding: 10px 135px 10px;
+    background-color: #2b2b2b; 
+    color: white;
+    border: 1px solid white;
+    transition: border-width 0.001s ease;      
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /* Flare */
 
 .ops-container input:hover {
@@ -85,6 +102,10 @@ input.equal-button {
 .ops-container .int-container input:hover {
     border-color: none;  
     border-width: none;
+}
+
+.return-button button:hover {
+    background-color: rgb(70, 70, 70);     
 }
 
 

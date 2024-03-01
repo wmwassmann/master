@@ -5,6 +5,7 @@
         <title>Calculator App</title>
         <link rel="stylesheet" href="Styles/globalStyles.css">
         <script src="Javascript/calculations.js"></script>
+        <script src="../../allGlobalScripts/globalScripts.js"></script>
     </head>
     <body>
         
@@ -45,10 +46,15 @@
                         <input type="button" value="00" onclick="addNumber(display, '00')">
                         <input type="button" value="0" onclick="addNumber(display, '0')">
                         <input class="equal-button" type="button" value="=" onclick="display.value = evalInput(display)">
-
+                        
                     </div>
                 </form>
             </div>
+            <div class="return-button">
+                <button onclick="returnToPortfolio()">
+                    Return to Portfolio
+                </button>
+            </div>
         </div>
     </body>
-</html>
+    </html>

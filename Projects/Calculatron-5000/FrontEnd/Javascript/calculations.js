@@ -1,30 +1,38 @@
 
 
 // Starts as an open input
-let lastEvaluated = false;
+let lastEvaluatedSolved = false;
 
-function clearIfLastEvaluated(display) {
-    if (lastEvaluated) {
+function clearIflastEvaluatedSolved(display) {
+    if (lastEvaluatedSolved) {
         display.value = ''; 
-        lastEvaluated = false; 
+        lastEvaluatedSolved = false; 
     }
 }
 
+function clearInput(display) {
+    display.value = '';
+}
+
 function addNumber(display, number) {
-    clearIfLastEvaluated(display); 
+    clearIflastEvaluatedSolved(display); 
     display.value += number; 
 }
 
 
 function addOperator(display, operator) {
-    clearIfLastEvaluated(display); 
+    // clearIflastEvaluatedSolved(display); 
+
+    if (lastEvaluatedSolved === true) {
+        clearIflastEvaluatedSolved(display);
+    }
     display.value += operator; 
 }
 
 
 // Evaluation
 function evalInput(display) {
-    lastEvaluated = true;
+    lastEvaluatedSolved = true;
     return eval(display.value);
 }
 
