@@ -10,8 +10,10 @@ const Portfolio = () => {
 
   return (
     <div className='portfolio-outer-container'> 
+      <div className='portfolio-title'>
+        Work in progress
+      </div>
       <div className='portfolio-inner-container'> 
-      Work in progress
         {projects.map(project => (
           <div key={project.id} className='project-card'>
             <h3>{project.title}</h3>
