@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Calculator App</title>
+        <link rel="stylesheet" href="Styles/globalStyles.css">
+        <script src="Javascript/calculations.js"></script>
+    </head>
+    <body>
+        
+        <div class="calculator-container">
+            <div class="calculator">
+                <form class="ops-container">
+                    <div class="calc-title">
+                        Calculatron-5000
+                    </div>
+                    <div class="int-container">
+                        <input class="int-field" type="text" name="display">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="clearInput(display)">
+                        <input type="button" value="DL" onclick="removeLastCharacter(display)">
+                        <input type="button" value="." onclick="addNumber(display, '.')">
+                        <input type="button" value="/" onclick="addOperator(display, '/')">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="addNumber(display, '7')">
+                        <input type="button" value="8" onclick="addNumber(display, '8')">
+                        <input type="button" value="9" onclick="addNumber(display, '9')">
+                        <input type="button" value="*" onclick="addOperator(display, '*')">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="addNumber(display, '4')">
+                        <input type="button" value="5" onclick="addNumber(display, '5')">
+                        <input type="button" value="6" onclick="addNumber(display, '6')">
+                        <input type="button" value="-" onclick="addOperator(display, '-')">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="addNumber(display, '1')">
+                        <input type="button" value="2" onclick="addNumber(display, '2')">
+                        <input type="button" value="3" onclick="addNumber(display, '3')">
+                        <input type="button" value="+" onclick="addOperator(display, '+')">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="addNumber(display, '00')">
+                        <input type="button" value="0" onclick="addNumber(display, '0')">
+                        <input class="equal-button" type="button" value="=" onclick="display.value = evalInput(display)">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

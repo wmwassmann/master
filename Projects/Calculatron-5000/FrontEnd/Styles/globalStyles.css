@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Containers */
+
+.calculator-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgb(21, 14, 37);
+}
+
+/* Calculator Outer */
+
+.calc-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.calculator {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+/* Inputs */
+
+.int-container {
+    border: 1px solid white; 
+    border-radius: 10px;
+}
+
+.ops-container input {
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    transition: border-width 0.001s ease;    
+    border: 1px solid transparent;
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: -6px -6px 15px rgba(255, 255, 255, 0.1), 7px 7px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.ops-container .int-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.ops-container .int-field {
+    text-align: right;
+    flex: 1; 
+    font-size: 45px;
+    box-shadow: none;
+}
+
+input.equal-button {
+    width: 150px;
+}
+
+/* Flare */
+
+.ops-container input:hover {
+    border-color: white;  
+    border-width: 1px;
+}
+
+.ops-container .int-container input:hover {
+    border-color: none;  
+    border-width: none;
+}
+
+
