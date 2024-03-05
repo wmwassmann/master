@@ -123,22 +123,13 @@ p {
   margin: 0.5rem;
 }
 
+/* GitHub Commits */
 
-
-
-/* FLAG for deletion - May be unneccessary nesting */
-/* === Skills Outer Containment === */
-
-.about-me-skills-container {
+.latest-commits {
   display: flex;
-  justify-content: center;
-  padding: 2.3rem;
-  align-items: center;
-  /* position: fixed;  */
-  top: 15%;
-  bottom: 0;
-  left: 46%;
-  right: 0;
-  width: 33%;
-  margin: auto;
+  flex-direction: column;
+  width: 30vw;
+  color: rgb(85, 85, 85);
 }
+
+
