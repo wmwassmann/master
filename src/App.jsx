@@ -7,6 +7,7 @@ import Game from "./pages/Game";
 import Resume from "./pages/Resume";
 import Navbar from "./components/Navbar/Navbar";
 import SiteHub from './pages/SiteHub';
+import CalculatronHomePage from '../Projects/Calculatron5000/FrontEnd';
 
 export default function App() {
   
@@ -16,9 +17,9 @@ export default function App() {
       <div className="nav-global">
         <Navbar /> 
       </div>
-      {/* <SiteHub/> */}
       <Routes>
         <Route path="/" element={<HomePage/>} />      
+        <Route path ="/calculatron" element={<CalculatronHomePage />}/>
         <Route path="/resume" element={<Resume/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contact" element={<Contact/>} />
