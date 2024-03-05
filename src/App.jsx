@@ -7,7 +7,7 @@ import Game from "./pages/Game";
 import Resume from "./pages/Resume";
 import Navbar from "./components/Navbar/Navbar";
 import SiteHub from './pages/SiteHub';
-import CalculatronHomePage from '../Projects/Calculatron5000/FrontEnd';
+import CalculatronHomePage from '../Projects/Calculatron/FrontEnd/src/Pages/CalculatronHomePage.jsx';
 
 export default function App() {
   

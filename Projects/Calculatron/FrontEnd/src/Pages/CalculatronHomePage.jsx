@@ -1,9 +1,13 @@
-import React from 'react'
-import "../Styles/globalStyles.css"
+import React, {useState } from 'react'
+import "../Styles/calcStyles.css"
 
-function CalculatronHomePage() {
+const CalculatronHomePage = () => {
     const [lastEvaluatedSolved, setLastEvaluatedSolved] = useState(false);
 
+    const returnToPortfolio =()=> {
+      window.location.href = '/master/#/portfolio';
+    }
+    
     const clearIfLastEvaluatedSolved = (display) => {
       if (lastEvaluatedSolved) {
         display.value = '';
@@ -37,7 +41,6 @@ function CalculatronHomePage() {
     const removeLastCharacter = (display) => {
       return display.value.toString().slice(0, -1);
     };
-
 
     return (
         <div className="calculator-container">
