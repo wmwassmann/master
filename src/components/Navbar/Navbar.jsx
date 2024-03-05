@@ -5,7 +5,6 @@ import "../../css/ComponentStyles/NavBar/navBar.css"
 export default function Navbar() {
 
     const handleTransition = (event, currentPage) => {
-        const history = useHistory();
         event.preventDefault();    
     
         const gitOut = document.querySelector('.center-title');
@@ -31,7 +30,6 @@ export default function Navbar() {
         
         setTimeout(() => {
             const destination = event.target.getAttribute('href');
-            history.replace(destination);
             window.location.href = destination;
 
         }, 200); 
