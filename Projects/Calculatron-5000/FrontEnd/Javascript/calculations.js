@@ -24,8 +24,10 @@ function addOperator(display, operator) {
     // clearIflastEvaluatedSolved(display); 
 
     if (lastEvaluatedSolved === true) {
+        console.log("True")
         clearIflastEvaluatedSolved(display);
     }
+    console.log("False")
     display.value += operator; 
 }
 

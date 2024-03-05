@@ -1,3 +1,4 @@
 function returnToPortfolio() {
-    window.location.href = '/master/Projects/FrontEnd/null#/portfolio';
+    console.log("Hello")
+    window.location.href = '/master/#/portfolio';
 }
