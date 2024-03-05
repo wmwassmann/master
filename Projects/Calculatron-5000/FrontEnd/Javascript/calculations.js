@@ -34,6 +34,7 @@ function addOperator(display, operator) {
 
 // Evaluation
 function evalInput(display) {
+    console.log("hellooooo")
     lastEvaluatedSolved = true;
     return eval(display.value);
 }
@@ -42,3 +43,4 @@ function evalInput(display) {
 function removeLastCharacter(display) {
     return display.value.toString().slice(0, -1);
 }
+

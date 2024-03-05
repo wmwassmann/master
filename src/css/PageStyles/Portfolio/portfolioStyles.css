@@ -28,6 +28,12 @@
 
 /* Card Styles */
 
+.project-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .project-card {
     display: flex;
@@ -39,6 +45,12 @@
     border: 1px solid black;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.project-image {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
 }
 
 .project-card:hover {

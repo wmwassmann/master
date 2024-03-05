@@ -16,7 +16,7 @@
                         Calculatron-5000
                     </div>
                     <div class="int-container">
-                        <input class="int-field" type="text" name="display">
+                        <input class="int-field" type="text" name="display" oninput="this.value = this.value.replace(/[^0-9+,.=\\$%^()*\/-]/g, '')">
                     </div>
                     <div>
                         <input type="button" value="AC" onclick="clearInput(display)">
