@@ -30,6 +30,7 @@ export default function Navbar() {
         
         setTimeout(() => {
             const destination = event.target.getAttribute('href');
+            console.log(destination)
             window.location.href = destination;
 
         }, 200); 
@@ -39,11 +40,12 @@ export default function Navbar() {
         <nav className="navbar-container">
             <ul>
                 <li className="site-title">
-                    <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>W
+                <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>William Wassmann</Link>
+                    {/* <Link className="nav-link" to="/" onClick={(event) => handleTransition(event, "home")}>W
                         <div className="title-extended">
                             illiam Wassmann
                         </div>
-                    </Link>
+                    </Link> */}
                 </li>
             </ul>
             <ul>
