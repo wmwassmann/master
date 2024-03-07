@@ -3,7 +3,7 @@ import { Route, Routes, Link, useLocation } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Game from "./pages/Game";
+import Game from "../Projects/WordGame/src/Pages/WordGameHomePage.jsx";
 import Resume from "./pages/Resume";
 import Navbar from "./components/Navbar/Navbar";
 import SiteHub from './pages/SiteHub';
@@ -19,11 +19,11 @@ export default function App() {
       </div>
       <Routes>
         <Route path="/" element={<HomePage/>} />      
-        <Route path ="/calculatron" element={<CalculatronHomePage />}/>
         <Route path="/resume" element={<Resume/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/game" element={<Game/>} />
+        <Route path="/calculatron" element={<CalculatronHomePage />}/>
+        <Route path="/wordgame" element={<Game/>} />
       </Routes>
     </>
   )

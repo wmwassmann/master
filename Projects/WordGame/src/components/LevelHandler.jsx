@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/ComponentStyles/Game/randomWord.css"
+import "../Styles/randomWord.css"
 
 const LevelHandler = (props) => {
     

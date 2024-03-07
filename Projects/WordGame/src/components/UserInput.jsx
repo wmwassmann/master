@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../../css/ComponentStyles/Game/userInput.css";
+import "../Styles/userInput.css";
 import Timer from './Timer';
 import LevelHandler from './LevelHandler';
 import WordReadOut from './WordReadOut';

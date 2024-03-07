@@ -8,7 +8,7 @@ const Portfolio = () => {
 
   const [projects, setProjects] = useState([
     { id: 1, title: 'Calculatron-5000', description: 'Calculator App', path: '/calculatron', thumb: calcThumb },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2', path: '/project2/index.html' },
+    { id: 2, title: 'Word Game', description: 'A Word Game', path: '/wordgame' },
     { id: 3, title: 'Project 3', description: 'Description of Project 3', path: '/project3/index.html' }
   ]);
 
