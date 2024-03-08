@@ -24,6 +24,8 @@
     /* flex-direction: ; */
     /* justify-content: center; */
     align-items: center;
+    font-size: 3em;
+    -ms-text-underline-position: auto;
 }
 
 /* Card Styles */
@@ -33,6 +35,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.project-name {
+    font-size: 1.5em;
+}
+
+.project-description {
+    font-size: 0.8em;
+    /* width: 120px; */   
+    padding: 10px;
 }
 
 .project-card {
