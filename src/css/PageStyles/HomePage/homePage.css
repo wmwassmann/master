@@ -192,10 +192,31 @@
     color: rgb(79, 79, 79);
 }
 
+.latest-commits h2 {
+    margin-right: 30px;
+}
+
 .latest-commits li {
     list-style-type: none;
 }
 
+.commit-list {
+    opacity: 0;
+  }
 
+.revealed {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 

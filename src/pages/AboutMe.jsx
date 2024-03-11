@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/PageStyles/AboutMe/aboutMe.css';
 import headshot from '../assets/headshot.jpg';
-import Download from '../components/Contact/PdfHandler';
 import Skillsets from '../components/Skillset/Skillset';
 
 const AboutMe = () => {
@@ -46,27 +45,6 @@ const AboutMe = () => {
     }, 30);
   };
 
-  const [latestCommits, setLatestCommits] = useState([]);
-
-  useEffect(() => {
-    fetchLatestCommits();
-  }, []);
-
-  const fetchLatestCommits = async () => {
-    try {
-      const response = await fetch('https://api.github.com/repos/wmwassmann/master/commits');
-      const data = await response.json();
-      setLatestCommits(data.slice(0, 5).map(commit => {
-        const regex = /^(\d{4}-\d{2}-\d{2})T/;
-        const match = regex.exec(commit.commit.author.date);
-        const date = match ? match[1] : "Unknown Date";
-        return { ...commit, commitDate: date };
-      }));
-    } catch (error) {
-      console.error('Error fetching latest commits:', error);
-    }
-  };
-
   return (
     <div className="readme-container">
       <div className='aboutme-body'>
@@ -81,16 +59,7 @@ const AboutMe = () => {
               {typedText}
             </p>
           </div>
-            <div className="latest-commits">
-              <h2>Latest Commits</h2>
-              <ul>
-                {latestCommits.map(commit => (
-                  <li key={commit.sha}>
-                    <strong>{commit.commitDate} </strong><strong>{commit.commit.author.name}</strong>: {commit.commit.message}
-                  </li>
-                ))}
-              </ul>
-            </div>
+       
         </div>          
         <div className='about-me-skills-container'>
           <div className="flank right">
