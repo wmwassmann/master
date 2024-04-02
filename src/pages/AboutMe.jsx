@@ -58,8 +58,7 @@ const AboutMe = () => {
             <p className='text-body'>
               {typedText}
             </p>
-          </div>
-       
+          </div>       
         </div>          
         <div className='about-me-skills-container'>
           <div className="flank right">
